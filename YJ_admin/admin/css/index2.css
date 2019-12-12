@@ -52,7 +52,7 @@
 
 .tab_Nav .sc_nav {
   position: absolute;
-  width: 75%;
+  width: 65%;
   top: 0;
   left: 0;
 }
@@ -72,7 +72,8 @@
   margin: 0 5px
 }
 
-.tab_Nav .sc_nav ul li a {
+.tab_Nav .sc_nav ul li a,
+.tab_Nav .sc_nav ul li span {
   font-family: MicrosoftYaHei;
   font-size: 12px;
   font-weight: normal;
@@ -80,6 +81,7 @@
   line-height: 14.4px;
   letter-spacing: 0px;
   color: #0c0c0c;
+  cursor: pointer;
 }
 
 .tab_Nav .serch_box {
