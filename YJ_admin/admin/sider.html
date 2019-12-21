@@ -37,5 +37,23 @@
 
 
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script>
+  $("side_tab a").each(function (index, elem) {
+    console.log($(this));
+    $(this).click(function () {
+      //全清
+      $("side_tab a").removeClass("active");
+      // $("#box div").css("display", "none");
+
+      //添加对应
+      $(this).addClass("active");
+      // $("#box div").eq($(this).index()).css("display","block");
+      console.log(index);
+      // $("#box div").eq(index).css("display", "block");
+    });
+
+  })
+</script>
 
 </html>

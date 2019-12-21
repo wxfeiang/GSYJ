@@ -218,3 +218,9 @@
 #left_nav ul>li.one-hover {
   background-color: #0c6eb2;
 }
+
+.swiper_box {
+  height: 298px;
+  border: 1px solid #0c6eb2;
+  box-sizing: border-box;
+}

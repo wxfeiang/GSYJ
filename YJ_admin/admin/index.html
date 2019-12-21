@@ -143,8 +143,23 @@
         </div>
       </div>
       <div class="layui-col-sm5">
-        <div class="list_box">
-          <img src="img/news.jpg" alt="" width="100%" height="99%">
+        <div class="list_box swiper_box">
+
+          <div class="layui-carousel" id="test1">
+            <div carousel-item>
+              <div>
+                <img src="img/news.jpg" alt="" width="100%" height="100%">
+              </div>
+              <div>
+                <img src="img/news.jpg" alt="" width="100%" height="100%">
+              </div>
+              <div>
+                <img src="img/news.jpg" alt="" width="100%" height="100%">
+              </div>
+              <div>条目4</div>
+              <div>条目5</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -341,21 +356,28 @@
     </div>
 
   </div>
-  <div id="tabs">
-    <ul id="nav_menu">
-      <li id="li_1"><a id="menu_1" href="javascript:parent.view_menu(1);" hidefocus="hidefocus" title="导航菜单"
-          class="active"><span>导航</span></a></li>
-      <li id="li_2"><a id="menu_2" href="javascript:parent.view_menu(2);" hidefocus="hidefocus" title="组织机构及人员"
-          class=""><span>组织</span></a></li>
-      <li id="li_3"><a id="menu_3" href="javascript:parent.view_menu(3);" hidefocus="hidefocus" title="微讯"
-          class=""><span>短信</span></a></li>
-      <li id="li_4"><a id="menu_4" href="javascript:parent.view_menu(4);" hidefocus="hidefocus" title="信息搜索"
-          class=""><span>搜索</span></a></li>
-    </ul>
-  </div>
+
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<link rel="stylesheet" href="layui/css/layui.css">
+<script src="layui/layui.js"></script>
 <script>
+  layui.use('carousel', function () {
+    var carousel = layui.carousel;
+    //建造实例
+    carousel.render({
+      elem: '#test1',
+      width: '100%' //设置容器宽度
+        ,
+      arrow: 'none', //始终显示箭头
+      height: '100%',
+      indicator: 'none',
+      //  anim: 'fade',
+      // interval: '1000'
+    });
+  });
+
+
   // 顶部滚动事件
   var sped = 0
   d_page.onclick = function () {
