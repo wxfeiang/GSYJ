@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <link rel="stylesheet" href="css/rest.css" />
+    <link rel="stylesheet" href="layui/css/layui.css">
+
+    <link rel="stylesheet" href="css/lunbo.css" />
+</head>
+
+<body>
+    <div class="warp_box">
+        <!-- 侧边tab  -->
+        <div class="side_tab">
+            <div class="items active">
+                第一组
+            </div>
+            <div class="items ">
+                第2组
+            </div>
+            <div class="items ">
+                第3组
+            </div>
+            <div class="items ">
+                第4组
+            </div>
+            <div class="items ">
+                第5组
+            </div>
+
+        </div>
+
+
+
+
+        <div class="layui-carousel" id="test0" lay-filter="test0">
+            <div carousel-item>
+                <div>
+                    <a href=""><img src="img/bg1.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一条
+                        </div>
+                    </a>
+
+                </div>
+                <div>
+                    <a href=""><img src="img/bg2.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh条
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一dddddddddddd条
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-carousel" id="test1" lay-filter="test2">
+            <div carousel-item>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一条
+                        </div>
+                    </a>
+
+                </div>
+                <div>
+                    <a href=""><img src="img/bg2.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh条
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一dddddddddddd条
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-carousel" id="test2" lay-filter="test3">
+            <div carousel-item>
+                <div>
+                    <a href=""><img src="img/bg1.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一条
+                        </div>
+                    </a>
+
+                </div>
+                <div>
+                    <a href=""><img src="img/bg2.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh条
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一dddddddddddd条
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-carousel" id="test3" lay-filter="test3">
+            <div carousel-item>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一条
+                        </div>
+                    </a>
+
+                </div>
+                <div>
+                    <a href=""><img src="img/bg2.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh条
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一dddddddddddd条
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="layui-carousel" id="test4" lay-filter="test4">
+            <div carousel-item>
+                <div>
+                    <a href=""><img src="img/bg2.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一条
+                        </div>
+                    </a>
+
+                </div>
+                <div>
+                    <a href=""><img src="img/bg2.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh条
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href=""><img src="img/bg3.jpg" alt="" width="100%" height="100%">
+                        <div class="title">
+                            这是第一dddddddddddd条
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+
+<script src="layui/layui.js"></script>
+<script>
+    layui.use(['element', 'carousel'], function() {
+        var $ = layui.jquery,
+            element = layui.element, //Tab的切换功能，切换事件监听等，需要依赖element模块
+            carousel = layui.carousel;
+        for (var i = 0; i < 5; i++) {
+            carousel.render({
+                elem: '#test' + i,
+                width: '100%', //设置容器宽度 ,
+                arrow: 'hover', //始终显示箭头
+                height: '100%',
+                indicator: 'inside',
+                anim: 'fade',
+                interval: 10000000,
+
+            });
+
+        }
+        $(".items").each(function(index) {
+            $(this).click(function() {
+                $(this).addClass("active").siblings().removeClass("active")
+                    //  $("#test" + index).show().siblings().hide()
+                $(".layui-carousel").hide()
+                $(".layui-carousel").eq(index).show()
+
+            })
+
+        })
+
+
+
+
+
+    });
+</script>
+
+</html>
