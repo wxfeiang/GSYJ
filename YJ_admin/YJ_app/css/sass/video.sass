@@ -1,0 +1,29 @@
+@function rem($px)
+    $rem: 75px
+    @return ($px / $rem)+rem
+html,body
+    background-color: #f5f5f5
+.img_box_detil
+    padding: rem(40px) 0 rem(20px)
+    .item_img
+        .video_box
+            position: relative
+            padding: rem(20px) 0
+            background: #000
+
+            .videos
+                width: 100%
+                height: rem(400px)
+            .zhezhao
+                position: absolute
+                top: 50%
+                left: 50%
+                margin: rem(-40px) 0 0 rem(-40px)
+                display: block
+                width: rem(80px)
+                height: rem(80px)
+
+        .title
+            text-align: center
+            font-size: rem(35px)
+            line-height: rem(100px)

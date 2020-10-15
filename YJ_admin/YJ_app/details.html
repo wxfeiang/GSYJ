@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>详情跳转页面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+    <link rel="stylesheet" href="css/rest.css" />
+    <link rel="stylesheet" href="css/details.css" />
+
+    <script src="js/remScale.js"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="mui-bar mui-bar-nav dis-tit">
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+      <h1 class="mui-title">这里是详情标题</h1>
+    </header>
+    <!-- 主题部分 -->
+    <div class="mui-content">
+      <!-- 文章标题 -->
+      <h3 class="artic_title">这里是文章标题</h3>
+      <h4 class="artic_timer">2019-19-29</h4>
+      <!-- 正文 -->
+      <div class="artic_center">这里是正文</div>
+      <!-- 底部操作按钮 -->
+      <div class="btn_bootm">
+        <div class="items_btn">
+          阅读
+          <span>1111</span>
+        </div>
+        <div class="items_btn" id="dianzan">
+          点赞
+          <span>1111</span>
+          <!-- 点过赞加red -->
+          <!-- <i class="mui-icon-extra mui-icon-extra-like red"></i> -->
+          <i class="mui-icon-extra mui-icon-extra-like"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script>
+      $('#dianzan').click(function () {
+        $(this).find('i').addClass('red')
+      })
+    </script>
+  </body>
+</html>

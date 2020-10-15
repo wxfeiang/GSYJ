@@ -1,0 +1,51 @@
+html, body {
+  background-color: #f5f5f5;
+}
+
+.artic_title {
+  padding: 0 0.48rem;
+  font-size: 0.53333rem;
+  line-height: 1.06667rem;
+}
+
+.artic_timer {
+  padding: 0 0.48rem;
+  font-size: 0.34667rem;
+  line-height: 0.53333rem;
+  color: #8d8d8d;
+}
+
+.artic_center {
+  padding: 0.26667rem 0.48rem 0;
+}
+
+.btn_bootm {
+  margin: 0.26667rem;
+  padding: 0 0.48rem;
+  display: flex;
+  justify-content: space-around;
+  height: 1.33333rem;
+}
+
+.btn_bootm .items_btn {
+  width: 48%;
+  background: #ededee;
+  text-align: center;
+  color: #616669;
+  height: 1.33333rem;
+  font-size: 0.53333rem;
+  line-height: 1.33333rem;
+}
+
+.btn_bootm .items_btn span {
+  color: #000;
+  margin: 0 0 0 0.13333rem;
+}
+
+.btn_bootm .items_btn i {
+  font-size: 0.53333rem;
+}
+
+.btn_bootm .items_btn .red {
+  color: red;
+}

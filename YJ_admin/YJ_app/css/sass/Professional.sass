@@ -1,0 +1,57 @@
+@function rem($px)
+    $rem: 75px
+    @return ($px / $rem)+rem
+html,body
+    background-color: #f5f5f5
+.img_box
+    padding: rem(40px) rem(36px) rem(20px)
+    .item_img
+        margin: 0 0 rem(20px) 0
+        a
+            display: block
+            width: 100%
+            height: rem(240px)
+            border-radius: 8px
+            overflow: hidden
+        img
+            width: 100%
+            height: 100%
+.img_box_detil
+    padding: 0
+    .item_img
+        background: #fff
+        a
+            display: block
+            width: 100%
+
+            overflow: hidden
+        img
+            width: 100%
+            height: rem(300px)
+        .title_box
+            position: relative
+            height: rem(100px)
+
+        .line
+            position: absolute
+            left: rem(20px)
+            right: rem(20px)
+            top: 50%
+            width: 92%
+            height: 1px
+            border-bottom: 1px solid #000
+
+        .cen_title
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: rem(100px)
+            display: flex
+            justify-content: center
+            span
+                padding: 0 rem(20px)
+                background: #fff
+                font-size: rem(40px)
+                line-height: rem(100px)
+                text-align: center

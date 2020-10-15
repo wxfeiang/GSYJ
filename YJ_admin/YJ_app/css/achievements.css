@@ -1,0 +1,47 @@
+html, body {
+  background-color: #f5f5f5;
+}
+
+.img_box {
+  padding: 0.53333rem 0.48rem 0.26667rem;
+}
+
+.img_box .item_img {
+  margin: 0 0 0.26667rem 0;
+}
+
+.img_box .item_img a {
+  display: block;
+  width: 100%;
+  height: 3.2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img_box .item_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.img_box_detil {
+  padding: 0.53333rem 0 0 0;
+}
+
+.img_box_detil .item_img a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img_box_detil .item_img img {
+  width: 100%;
+  height: 4rem;
+}
+
+.img_box_detil .item_img h4 {
+  padding: 0.26667rem;
+  background: #fff;
+  font-size: 0.53333rem;
+  line-height: 1.06667rem;
+  text-align: center;
+}
