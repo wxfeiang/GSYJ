@@ -1,34 +1,118 @@
-.side_warp {
-  width: 300px;
+body {
+  background: #f7f7f7;
 }
 
-.side_tab ul {
-  background-image: linear-gradient(0deg, #dfe9f3 0%, #fcfdfe 100%), linear-gradient(#000000, #000000);
-  background-blend-mode: normal, normal;
-  border-radius: 2px;
+.text_overflow, .list_box .arc_list li a {
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.side_tab ul li {
-  box-sizing: border-box;
-  width: 25%;
-  border-left: -1px solid #bfcfe1;
-  border-right: 1px solid #bfcfe1;
+.li_hover {
+  transition: all .3s ease 0s;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
-.side_tab ul li a {
-  display: block;
-  line-height: 25px;
-  text-align: center;
+.li_hover:hover {
+  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
+  transition: all .3s ease 0s;
+  transform: translate3d(0, -10px, 0);
+  -moz-transform: translate3d(0, -10px, 0);
+  -webkit-transform: translate3d(0, -10px, 0);
+}
+
+.list_box .list_h3 {
   font-family: MicrosoftYaHei;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
   letter-spacing: 0px;
-  color: #333333;
+  color: #3476f0;
+  padding: 10px 20px;
 }
 
-.side_tab ul li a:hover, .side_tab ul li a.active {
-  background-image: linear-gradient(0deg, #3c89c6 0%, #52a1e4 100%), linear-gradient(#3e8ac8, #3e8ac8);
-  background-blend-mode: normal, normal;
+.list_box .list_h3 a {
+  display: inline-block;
+  float: right;
+  background-color: #fff;
+  border-radius: 5px;
+  border: solid 1px #3476f0;
+  width: 45px;
+  height: 22px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.list_box .list_h3 a:hover {
+  background: #3476f0;
   color: #fff;
-  border: transparent;
+}
+
+.list_box .swiper_box {
+  height: 408px;
+}
+
+.list_box .arc_list {
+  background-color: #ffffff;
+  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
+  border-radius: 10px;
+  padding: 20px 20px 20px 10px;
+}
+
+.list_box .arc_list .new {
+  background: url(../img/news.png) no-repeat top left;
+}
+
+.list_box .arc_list li:hover {
+  cursor: pointer;
+  background: #e4effe !important;
+}
+
+.list_box .arc_list li a {
+  display: inline-block;
+  max-width: 80%;
+  font-family: SimSun;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #000000;
+  line-height: 26px;
+  padding: 0 0 0  10px;
+}
+
+.list_box .arc_list li span {
+  float: right;
+  font-family: SimSun;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #000;
+  line-height: 26px;
+}
+
+.list_box .action_box {
+  background-color: #ffffff;
+  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.warp_box {
+  padding: 0 20px  30px;
+}
+
+.flist_box {
+  background-color: #ffffff;
+  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.fist_arc {
+  box-shadow: none !important;
+  padding: 0 0px 0 10px !important;
 }
