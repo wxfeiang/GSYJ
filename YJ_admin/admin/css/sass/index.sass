@@ -1,5 +1,6 @@
 $f7: #f7f7f7
 $shadow: 5px 8px 15px 0px  rgba(222, 222, 222, 0.5)
+$color236: #2367e3
 body
   background: $f7
 
@@ -28,22 +29,21 @@ body
     letter-spacing: 0px
     color: #3476f0
     padding: 10px 20px
-    a
-      display: inline-block
-      float: right
-      background-color: #fff
-      border-radius: 5px
-      border: solid 1px #3476f0
-      width: 45px
-      height: 22px
-      text-align: center
-      font-size: 14px
-      &:hover
-        background: #3476f0
-        color: #fff
+  .more
+    display: inline-block
+    float: right
+    background-color: #fff
+    border-radius: 5px
+    border: solid 1px #3476f0
+    width: 45px
+    height: 22px
+    text-align: center
+    font-size: 14px
+    &:hover
+      background: #3476f0
+      color: #fff
   .swiper_box
-    height: 408px
-
+    height: 376px
   .arc_list
     background-color: #ffffff
     box-shadow: $shadow
@@ -82,7 +82,152 @@ body
     box-shadow: $shadow
     border-radius: 10px
     padding: 20px
+    height: 380px
     .link_item
+      float: left
+      width: 16.6%
+      margin: 0 0 24px 0
+      a
+        display: block
+        width: 52px
+        height: 52px
+        margin: 0 auto
+
+        text-align: center
+        border-radius: 50%
+        line-height: 52px
+        &:hover
+          background-color: #d3e2fc
+      h4
+        font-family: SimSun
+        font-size: 14px
+        font-weight: normal
+        font-stretch: normal
+        letter-spacing: 0px
+        color: #000000
+        line-height: 26px
+        text-align: center
+        width: 100%
+        @extend .text_overflow
+  .tabls
+    padding: 0 20px 0 0
+    li
+      float: left
+      font-family: MicrosoftYaHei
+      font-size: 18px
+      font-weight: normal
+      font-stretch: normal
+      letter-spacing: 0px
+      color: #949596
+      padding: 10px 20px
+      &:hover
+        cursor: pointer
+        color: $color236
+    .active
+      color: $color236
+  .moreSpan
+    display: inline-block
+    position: absolute
+    top: 15px
+    right: 20px
+    background-color: #fff
+    border-radius: 5px
+    border: solid 1px #3476f0
+    width: 45px
+    height: 22px
+    text-align: center
+    font-size: 14px
+    cursor: pointer
+    &:hover
+      background: #3476f0
+      color: #fff
+
+  .tab_arc
+    display: none
+  .show
+    display: block
+  .warp_linK
+    padding: 12px 10px
+    background: #fff
+    box-shadow: $shadow
+    border-radius: 10px
+
+    a
+      display: block
+      background: $f7
+      padding: 20px
+      &:hover
+        background: #fff
+      img
+        width: 100%
+  .arc_img_list
+    padding: 12px 10px 1px
+    background: #fff
+    box-shadow: $shadow
+    border-radius: 10px
+    a
+      display: block
+      margin: 0 0 20px 0
+      .img_left
+        width: 20%
+        height: 88px
+        img
+          width: 100%
+          height: 100%
+      .center_right
+        width: 80%
+        .h4_titl_box
+          background: #f0f0f0
+          padding: 0 0 0 10px
+          .h4_title
+            font-family: SimSun
+            font-size: 14px
+            font-weight: bold
+            font-stretch: normal
+            letter-spacing: 0px
+            color: #000000
+            line-height: 26px
+            max-width: 50%
+            @extend .text_overflow
+          .h4_tips
+            height: 26px
+            span
+              display: inline-block
+              font-family: SimSun
+              font-size: 14px
+              font-weight: normal
+              font-stretch: normal
+              letter-spacing: 0px
+              color: #000000
+              line-height: 26px
+              width: 80px
+              @extend .text_overflow
+            .spn1
+              max-width: 100px
+              margin-right: 10px
+        .content
+          padding: 0 0 0 10px
+          font-family: SimSun
+          font-size: 10px
+          font-weight: normal
+          font-stretch: normal
+          letter-spacing: 0px
+          color: #424242
+          line-height: 20px
+          overflow: hidden
+          text-overflow: ellipsis
+          display: -webkit-box
+          -webkit-line-clamp: 3
+          -webkit-box-orient: vertical
+
+.img_hover
+  -webkit-filter: grayscale(100%)
+  -moz-filter: grayscale(100%)
+  -ms-filter: grayscale(100%)
+  -o-filter: grayscale(100%)
+  filter: grayscale(100%)
+  filter: gray
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)
 
 // 每一块
 .warp_box
@@ -95,3 +240,7 @@ body
 .fist_arc
   box-shadow: none !important
   padding: 0 0px 0 10px !important
+.dy_height5
+  height: 500px
+.dy_height38
+  height: 380px
