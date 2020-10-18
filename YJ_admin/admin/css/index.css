@@ -196,7 +196,7 @@ body {
 .list_box .warp_linK a {
   display: block;
   background: #f7f7f7;
-  padding: 20px;
+  padding: 20px 20px;
 }
 
 .list_box .warp_linK a:hover {
@@ -204,7 +204,7 @@ body {
 }
 
 .list_box .warp_linK a img {
-  width: 100%;
+  width: 98%;
 }
 
 .list_box .arc_img_list {

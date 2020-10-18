@@ -1,0 +1,132 @@
+//  toubu 
+$f7: #f7f7f7
+$color236: #2367e3
+.header
+
+    background: url(../img/header_bg_01.jpg) left top
+    h1
+        padding: 0 0 0 10px
+        line-height: 50px
+    .right_box
+        padding: 0 20px 0 0
+        .serc_box
+            position: relative
+            top: 10px
+
+            width: 260px
+            height: 30px
+            background-color: #f4f3f3
+            border-radius: 15px
+            border: solid 1px #2367e3
+            .serch_input
+                width: 80%
+                height: 30px
+                padding: 0  20px
+            .serch_btn
+                position: absolute
+                top: 4px
+                right: 10px
+                cursor: pointer
+        .mesentr
+            margin: 0 0 0 10px
+            .center_title
+                position: relative
+                font-family: MicrosoftYaHei
+                font-size: 16px
+                font-weight: normal
+                font-stretch: normal
+                letter-spacing: 0px
+                color: #2367e3
+                cursor: pointer
+                vertical-align: middle
+                line-height: 50px
+                .icon_down
+                    color: #2367e3
+                    font-size: 12px
+                    transition: all .5s ease 0s
+
+                .mesentr_action
+                    visibility: hidden
+                    position: absolute
+                    top: 50px
+                    left: 0
+                    width: 150px
+                    z-index: 10
+                    background: #fff
+                    border: 1px solid $color236
+                    box-shadow: 5px 8px 15px 0px  rgba(222, 222, 222, 0.5)
+                    transition: all .5s ease 0s
+                    transform: translate3d(0, 0, 0)
+                    -moz-transform: translate3d(0, 0, 0)
+                    -webkit-transform: translate3d(0, 0, 0)
+                    .item_a
+                        display: block
+                        line-height: 30px
+                        text-align: center
+                        font-size: 16px
+                        font-weight: normal
+                        font-stretch: normal
+                        letter-spacing: 0px
+                        color: #000000
+                        &:hover
+                            color: #fff
+                            background: #2367e3
+                &:hover
+                    .mesentr_action
+                        visibility: visible
+                        top: 40px
+                        transform: translate3d(0, 0, 0)
+                        -moz-transform: translate3d(0, 0, 0)
+                        -webkit-transform: translate3d(0, 0, 0)
+        .header_link
+            line-height: 50px
+            margin: 0 10px
+            color: #2367e3
+            font-size: 16px
+            .icon_fill
+                font-size: 16px
+            span
+                color: #ff0000
+            img
+                width: 14px
+                height: 14px
+// tab_Nav
+.tab_Nav
+    background: #2367e3
+    ul
+        li
+            a
+                display: inline-block
+                padding: 0 20px
+                line-height: 46px
+                color: #fff
+                &:hover
+                    background: #2256b4
+            .active
+                background: $f7
+                color: $color236
+
+// footer
+.footer
+    background: #40619b
+    height: 112px
+    padding: 60px 0 0 0
+    p
+        text-align: center
+        font-family: SimSun
+        font-size: 14px
+        font-weight: normal
+        font-stretch: normal
+        letter-spacing: 0px
+        color: #ffffff
+        line-height: 40px
+        a
+            display: inline-block
+            font-family: SimSun
+            font-size: 14px
+            font-weight: normal
+            font-stretch: normal
+            letter-spacing: 0px
+            color: #ffffff
+            line-height: 40px
+            margin-right: 30px
