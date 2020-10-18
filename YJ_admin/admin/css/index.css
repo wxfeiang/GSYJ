@@ -286,6 +286,10 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.list_box .arc_img_list a:hover {
+  background: #e4effe;
+}
+
 .img_hover {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
