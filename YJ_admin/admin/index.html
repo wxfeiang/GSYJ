@@ -19,7 +19,7 @@
       <div class="right_box clearfix fr">
         <!-- serch -->
         <div class="serc_box fl">
-          <input type="text" class="serch_input" />
+          <input type="text" class="serch_input" placeholder="请输入搜索内容" />
           <div class="serch_btn">
             <img src="img/serch.png" alt="搜索" />
           </div>
@@ -30,10 +30,20 @@
             欢迎您某某
             <i class="layui-icon layui-icon-triangle-d"></i>
             <!-- 个人中心操作 -->
-            <div class="mesentr_action">
-              <a href="" class="item_a"> 个人中心 </a>
-              <a href="" class="item_a"> 修改密码 </a>
-              <a href="" class="item_a"> 退出登录 </a>
+            <div class="mesentr_action clearfix">
+              <div class="mster_left fl">
+                <img src="img/alli.png" alt="" />
+              </div>
+              <div class="mesent_right fl">
+                <div class="mesent_right_top">
+                  <a href="">修改密码</a>
+                  <a href="">退出系统</a>
+                </div>
+                <div class="mesent_right_center">
+                  <div class="center_item">部门: <span>印章</span></div>
+                  <div class="center_item">岗位: <span>超级管理员</span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -84,12 +94,12 @@
       <!-- 第一块 -->
       <div class="layui-row layui-col-space10">
         <div class="layui-col-sm8">
-          <div class="list_box">
+          <div class="list_box li_hover">
             <h3 class="list_h3">
               公司新闻
               <a class="more">更多</a>
             </h3>
-            <div class="layui-row flist_box li_hover">
+            <div class="layui-row flist_box">
               <div class="layui-row layui-col-space10">
                 <div class="layui-col-sm6">
                   <div class="swiper_box">
@@ -111,15 +121,25 @@
                 <div class="layui-col-sm6">
                   <ul class="arc_list fist_arc">
                     <li class="clearfix">
-                      <a href="" class="new">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
+                      <a href="" class=" ">
+                        <div class="new">
+                          <img src="img/news.png" alt="" />
+                        </div>
+                        关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
+                      >
                       <span>2019-09-10</span>
                     </li>
                     <li class="clearfix">
-                      <a href="" class="new">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
+                      <a href="" class=" ">
+                        <div class="new">
+                          <img src="img/news.png" alt="" />
+                        </div>
+                        关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
+                      >
                       <span>2019-09-10</span>
                     </li>
                     <li class="clearfix">
-                      <a href="" class="new">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
+                      <a href="" class=" ">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
                       <span>2019-09-10</span>
                     </li>
                     <li class="clearfix">
@@ -158,9 +178,9 @@
         </div>
 
         <div class="layui-col-sm4">
-          <div class="list_box">
+          <div class="list_box li_hover">
             <h3 class="list_h3">应用导航</h3>
-            <div class="clearfix action_box li_hover">
+            <div class="clearfix action_box">
               <div class="link_item">
                 <a href="">
                   <img src="img/bianqian.png" alt="" />
@@ -289,14 +309,19 @@
       <!-- 第二块 -->
       <div class="layui-row layui-col-space10">
         <div class="layui-col-sm6">
-          <div class="list_box dy_height38">
+          <div class="list_box dy_height38 li_hover">
             <h3 class="list_h3">
               公司文件
               <a href="" class="more">更多</a>
             </h3>
-            <ul class="arc_list li_hover">
+            <ul class="arc_list">
               <li class="clearfix">
-                <a href="">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
+                <a href="">
+                  <div class="new">
+                    <img src="img/news.png" alt="" />
+                  </div>
+                  关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
+                >
                 <span>2019-09-10</span>
               </li>
               <li class="clearfix">
@@ -339,19 +364,25 @@
           </div>
         </div>
         <div class="layui-col-sm6">
-          <div class="list_box dy_height38">
+          <div class="list_box dy_height38 li_hover">
             <ul class="clearfix tabls">
               <li class="active">通知公告</li>
               <li>会议纪要</li>
               <li>通告</li>
             </ul>
             <span class="moreSpan" index="0">更多</span>
-            <ul class="arc_list li_hover tab_arc show">
-              <li class="clearfix new">
-                <a href=""> 第一块显示测试 （试行）》的通知</a>
+            <ul class="arc_list tab_arc show">
+              <li class="clearfix">
+                <a href="">
+                  <!-- 是否是最新消息显示 -->
+                  <div class="new">
+                    <img src="img/news.png" alt="" />
+                  </div>
+                  第一块显示测试 （试行）》的通知
+                </a>
                 <span>2019-09-10</span>
               </li>
-              <li class="clearfix new">
+              <li class="clearfix">
                 <a href="">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
                 <span>2019-09-10</span>
               </li>
@@ -478,13 +509,13 @@
       <!-- 第三块 -->
       <div class="layui-row layui-col-space10">
         <div class="layui-col-sm4">
-          <div class="list_box dy_height38">
+          <div class="list_box dy_height38 li_hover">
             <h3 class="list_h3">
               知识库
               <a href="" class="more">更多</a>
             </h3>
-            <ul class="arc_list li_hover">
-              <li class="clearfix new">
+            <ul class="arc_list">
+              <li class="clearfix">
                 <a href="">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
                 <span>2019-09-10</span>
               </li>
@@ -528,12 +559,12 @@
           </div>
         </div>
         <div class="layui-col-sm4">
-          <div class="list_box dy_height38">
+          <div class="list_box dy_height38 li_hover">
             <h3 class="list_h3">
               基层动态
               <a href="" class="more">更多</a>
             </h3>
-            <div class="arc_img_list li_hover">
+            <div class="arc_img_list">
               <a href="" class="clearfix">
                 <div class="fl img_left">
                   <img src="img/alli.png" alt="" />
@@ -598,12 +629,12 @@
           </div>
         </div>
         <div class="layui-col-sm4">
-          <div class="list_box">
+          <div class="list_box li_hover">
             <h3 class="list_h3">
               外部链接
               <a href="" class="more">更多</a>
             </h3>
-            <div class="warp_linK li_hover">
+            <div class="warp_linK">
               <div class="layui-row layui-col-space10">
                 <div class="layui-col-sm6">
                   <a href="">

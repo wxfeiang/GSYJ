@@ -29,6 +29,7 @@ body
     letter-spacing: 0px
     color: #3476f0
     padding: 10px 20px
+    line-height: 22px
   .more
     display: inline-block
     float: right
@@ -39,6 +40,7 @@ body
     height: 22px
     text-align: center
     font-size: 14px
+    line-height: 22px
     &:hover
       background: #3476f0
       color: #fff
@@ -49,8 +51,7 @@ body
     box-shadow: $shadow
     border-radius: 10px
     padding: 20px 20px 20px 10px
-    .new
-      background: url(../img/news.png)  no-repeat top left
+
     li
       &:hover
         cursor: pointer
@@ -67,6 +68,14 @@ body
         line-height: 26px
         @extend .text_overflow
         padding: 0 0 0  10px
+        position: relative
+        .new
+          position: absolute
+          left: 0
+          top: 0
+          width: 28px
+          height: 28px
+          // background: url(../img/news.png)  no-repeat top left
 
       span
         float: right

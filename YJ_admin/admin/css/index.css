@@ -31,6 +31,7 @@ body {
   letter-spacing: 0px;
   color: #3476f0;
   padding: 10px 20px;
+  line-height: 22px;
 }
 
 .list_box .more {
@@ -43,6 +44,7 @@ body {
   height: 22px;
   text-align: center;
   font-size: 14px;
+  line-height: 22px;
 }
 
 .list_box .more:hover {
@@ -61,10 +63,6 @@ body {
   padding: 20px 20px 20px 10px;
 }
 
-.list_box .arc_list .new {
-  background: url(../img/news.png) no-repeat top left;
-}
-
 .list_box .arc_list li:hover {
   cursor: pointer;
   background: #e4effe !important;
@@ -81,6 +79,15 @@ body {
   color: #000000;
   line-height: 26px;
   padding: 0 0 0  10px;
+  position: relative;
+}
+
+.list_box .arc_list li a .new {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
 }
 
 .list_box .arc_list li span {
