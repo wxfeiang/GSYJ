@@ -8,6 +8,21 @@ body {
   white-space: nowrap;
 }
 
+.li_hover {
+  transition: all .3s ease 0s;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.li_hover:hover {
+  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
+  transition: all .3s ease 0s;
+  transform: translate3d(0, -10px, 0);
+  -moz-transform: translate3d(0, -10px, 0);
+  -webkit-transform: translate3d(0, -10px, 0);
+}
+
 .list_box .list_h3 {
   font-family: MicrosoftYaHei;
   font-size: 18px;
