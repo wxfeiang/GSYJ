@@ -121,10 +121,18 @@
 }
 
 .header .right_box .header_link {
-  line-height: 50px;
-  margin: 0 10px;
+  display: inline-block;
+  margin: 10px  0 0;
   color: #2367e3;
   font-size: 16px;
+  line-height: 30px;
+  height: 40px;
+  padding: 0  10px;
+}
+
+.header .right_box .header_link:hover {
+  border-radius: 8px 8px 0 0;
+  background: #fff;
 }
 
 .header .right_box .header_link .icon_fill {
@@ -154,6 +162,7 @@
 
 .tab_Nav ul li a:hover {
   background: #2256b4;
+  color: #fff;
 }
 
 .tab_Nav ul li .active {
@@ -188,4 +197,10 @@
   color: #ffffff;
   line-height: 40px;
   margin-right: 30px;
+}
+
+.footer p a img {
+  height: 17px;
+  line-height: 40px;
+  margin-top: -5px;
 }
