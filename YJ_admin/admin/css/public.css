@@ -1,5 +1,6 @@
 .header {
-  background: url(../img/header_bg_01.jpg) left top;
+  padding: 26px 0;
+  background: #fff url(../img/header_bg.png) left top;
 }
 
 .header h1 {
@@ -126,12 +127,11 @@
   color: #2367e3;
   font-size: 16px;
   line-height: 30px;
-  height: 40px;
   padding: 0  10px;
 }
 
 .header .right_box .header_link:hover {
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   background: #fff;
 }
 
@@ -178,7 +178,7 @@
 
 .footer p {
   text-align: center;
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -189,7 +189,7 @@
 
 .footer p a {
   display: inline-block;
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;

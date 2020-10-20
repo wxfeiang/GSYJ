@@ -8,21 +8,6 @@ body {
   white-space: nowrap;
 }
 
-.li_hover {
-  transition: all .3s ease 0s;
-  transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-.li_hover:hover {
-  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
-  transition: all .3s ease 0s;
-  transform: translate3d(0, -10px, 0);
-  -moz-transform: translate3d(0, -10px, 0);
-  -webkit-transform: translate3d(0, -10px, 0);
-}
-
 .list_box .list_h3 {
   font-family: MicrosoftYaHei;
   font-size: 18px;
@@ -71,12 +56,12 @@ body {
 .list_box .arc_list li a {
   display: inline-block;
   max-width: 80%;
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
-  color: #000000;
+  color: #454545;
   line-height: 26px;
   padding: 0 0 0  10px;
   position: relative;
@@ -92,12 +77,12 @@ body {
 
 .list_box .arc_list li span {
   float: right;
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
-  color: #000;
+  color: #454545;
   line-height: 26px;
 }
 
@@ -130,7 +115,7 @@ body {
 }
 
 .list_box .action_box .link_item h4 {
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -246,7 +231,7 @@ body {
 }
 
 .list_box .arc_img_list a .center_right .h4_titl_box .h4_title {
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 14px;
   font-weight: bold;
   font-stretch: normal;
@@ -279,7 +264,7 @@ body {
 
 .list_box .arc_img_list a .center_right .content {
   padding: 0 0 0 10px;
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 10px;
   font-weight: normal;
   font-stretch: normal;
@@ -321,6 +306,10 @@ body {
 .fist_arc {
   box-shadow: none !important;
   padding: 0 0px 0 10px !important;
+}
+
+.fist_arc li {
+  margin: 0 0 8px 0;
 }
 
 .dy_height5 {
