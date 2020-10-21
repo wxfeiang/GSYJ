@@ -1,10 +1,16 @@
 //  toubu 
 $f7: #f7f7f7
 $color236: #2367e3
+.headfixd
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    z-index: 9
 .header
     padding: 26px 0
 
-    background: #fff  url(../img/header_bg.png) left top
+    background: #fff  url(../img/header_top.png) center center no-repeat
     h1
         padding: 0 0 0 10px
         line-height: 50px
@@ -13,17 +19,20 @@ $color236: #2367e3
         .serc_box
             position: relative
             top: 10px
-
             width: 260px
             height: 30px
-            background-color: #f4f3f3
+
             border-radius: 15px
             border: solid 1px #2367e3
+            overflow: hidden
             .serch_input
-                width: 80%
+                width: 100%
+
                 height: 30px
                 padding: 0  20px
                 color: $color236
+                background: #f4f3f3
+
             .serch_btn
                 position: absolute
                 top: 4px
@@ -31,7 +40,6 @@ $color236: #2367e3
                 cursor: pointer
         .mesentr
             margin: 10px 0 0 10px
-
             .center_title
                 padding: 0 10px
                 position: relative
@@ -130,6 +138,7 @@ $color236: #2367e3
                 padding: 0 20px
                 line-height: 46px
                 color: #fff
+                font-size: 18px
                 &:hover
                     background: #2256b4
                     color: #fff
@@ -165,3 +174,4 @@ $color236: #2367e3
                 height: 17px
                 line-height: 40px
                 margin-top: -5px
+                margin-right: 5px

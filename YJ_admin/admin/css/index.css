@@ -25,7 +25,7 @@ body {
 
 .list_box .list_h3 {
   font-family: MicrosoftYaHei;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
@@ -43,8 +43,11 @@ body {
   width: 45px;
   height: 22px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 22px;
+  font-family: MicrosoftYaHei;
+  cursor: pointer;
+  color: #3476f0;
 }
 
 .list_box .more:hover {
@@ -60,7 +63,11 @@ body {
   background-color: #ffffff;
   box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
   border-radius: 10px;
-  padding: 20px 20px 20px 10px;
+  padding: 10px 20px 2px 10px;
+}
+
+.list_box .arc_list li {
+  margin: 0 0 8px 0;
 }
 
 .list_box .arc_list li:hover {
@@ -70,13 +77,13 @@ body {
 
 .list_box .arc_list li a {
   display: inline-block;
-  max-width: 80%;
+  max-width: 60%;
   font-family: MicrosoftYaHei;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
-  color: #454545;
+  color: #949393;
   line-height: 26px;
   padding: 0 0 0  10px;
   position: relative;
@@ -93,7 +100,7 @@ body {
 .list_box .arc_list li span {
   float: right;
   font-family: MicrosoftYaHei;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
@@ -131,7 +138,7 @@ body {
 
 .list_box .action_box .link_item h4 {
   font-family: MicrosoftYaHei;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
@@ -148,12 +155,12 @@ body {
 .list_box .tabls li {
   float: left;
   font-family: MicrosoftYaHei;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
   color: #949596;
-  padding: 10px 20px;
+  padding: 9px 20px;
 }
 
 .list_box .tabls li:hover {
@@ -176,8 +183,9 @@ body {
   width: 45px;
   height: 22px;
   text-align: center;
-  font-size: 14px;
   cursor: pointer;
+  font: 12px/22px "MicrosoftYaHei";
+  color: #3476f0;
 }
 
 .list_box .moreSpan:hover {
@@ -204,10 +212,6 @@ body {
   display: block;
   background: #f7f7f7;
   padding: 20px 20px;
-}
-
-.list_box .warp_linK a:hover {
-  background: #fff;
 }
 
 .list_box .warp_linK a img {
@@ -253,7 +257,7 @@ body {
   letter-spacing: 0px;
   color: #000000;
   line-height: 26px;
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .list_box .arc_img_list a .center_right .h4_titl_box .h4_tips {
@@ -263,7 +267,7 @@ body {
 .list_box .arc_img_list a .center_right .h4_titl_box .h4_tips span {
   display: inline-block;
   font-family: SimSun;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
@@ -275,6 +279,7 @@ body {
 .list_box .arc_img_list a .center_right .h4_titl_box .h4_tips .spn1 {
   max-width: 100px;
   margin-right: 10px;
+  font-size: 12px;
 }
 
 .list_box .arc_img_list a .center_right .content {
@@ -308,7 +313,7 @@ body {
 }
 
 .warp_box {
-  padding: 0 20px  30px;
+  padding: 158px 20px  30px;
 }
 
 .flist_box {
@@ -325,12 +330,4 @@ body {
 
 .fist_arc li {
   margin: 0 0 8px 0;
-}
-
-.dy_height5 {
-  height: 500px;
-}
-
-.dy_height38 {
-  height: 380px;
 }
