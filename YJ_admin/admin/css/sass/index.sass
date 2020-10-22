@@ -14,11 +14,11 @@ body
   -moz-transform: translate3d(0, 0, 0)
   -webkit-transform: translate3d(0, 0, 0)
   &:hover
-    box-shadow: $shadow
+    // box-shadow: $shadow
     transition: all .3s ease 0s
-    transform: translate3d(0, -10px, 0)
-    -moz-transform: translate3d(0, -10px, 0)
-    -webkit-transform: translate3d(0, -10px, 0)
+    transform: translate3d(0, -2px, 0)
+    -moz-transform: translate3d(0, -2px, 0)
+    -webkit-transform: translate3d(0, -2px, 0)
 
 .list_box
   .list_h3
@@ -64,14 +64,14 @@ body
         display: inline-block
         max-width: 60%
         font-family: MicrosoftYaHei
-        font-size: 12px
+        font-size: 14px
         font-weight: normal
         font-stretch: normal
         letter-spacing: 0px
         color: #949393
         line-height: 26px
         @extend .text_overflow
-        padding: 0 0 0  16px
+        padding: 0 0 0  20px
         position: relative
         .new
           position: absolute
@@ -84,7 +84,7 @@ body
       span
         float: right
         font-family: MicrosoftYaHei
-        font-size: 10px
+        font-size: 12px
         font-weight: normal
         font-stretch: normal
         letter-spacing: 0px
@@ -95,7 +95,12 @@ body
     box-shadow: $shadow
     border-radius: 10px
     padding: 20px
-    height: 380px
+    height: 382px
+    overflow-y: auto
+    -ms-overflow-style: none
+    &::-webkit-scrollbar
+      display: none
+
     .link_item
       float: left
       width: 16.6%
@@ -132,7 +137,8 @@ body
       font-stretch: normal
       letter-spacing: 0px
       color: #949596
-      padding: 9px 20px
+      padding: 10px 20px
+      line-height: 22px
       &:hover
         cursor: pointer
         color: $color236
@@ -165,7 +171,6 @@ body
     background: #fff
     box-shadow: $shadow
     border-radius: 10px
-    min-height: 312px
 
     a
       display: block
@@ -208,7 +213,7 @@ body
             height: 26px
             span
               display: inline-block
-              font-family: SimSun
+              font-family: MicrosoftYaHei
               font-size: 10px
               font-weight: normal
               font-stretch: normal
@@ -254,6 +259,7 @@ body
   box-shadow: $shadow
   border-radius: 10px
   padding: 20px
+  min-height: 382px
 .fist_arc
   box-shadow: none !important
   padding: 0 0px 0 10px !important
@@ -264,6 +270,9 @@ body
 // .dy_height38
 //   min-height: 380px
 //   overflow: hidden
+.min338
+  min-height: 338px
+  box-sizing: border-box
 
 @media screen and (max-width: 1300px)
   .h4_tips

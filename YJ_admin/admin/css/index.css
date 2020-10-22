@@ -16,11 +16,10 @@ body {
 }
 
 .li_hover:hover {
-  box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
   transition: all .3s ease 0s;
-  transform: translate3d(0, -10px, 0);
-  -moz-transform: translate3d(0, -10px, 0);
-  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -2px, 0);
+  -moz-transform: translate3d(0, -2px, 0);
+  -webkit-transform: translate3d(0, -2px, 0);
 }
 
 .list_box .list_h3 {
@@ -79,13 +78,13 @@ body {
   display: inline-block;
   max-width: 60%;
   font-family: MicrosoftYaHei;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
   color: #949393;
   line-height: 26px;
-  padding: 0 0 0  16px;
+  padding: 0 0 0  20px;
   position: relative;
 }
 
@@ -100,7 +99,7 @@ body {
 .list_box .arc_list li span {
   float: right;
   font-family: MicrosoftYaHei;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: 0px;
@@ -113,7 +112,13 @@ body {
   box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
   border-radius: 10px;
   padding: 20px;
-  height: 380px;
+  height: 382px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+.list_box .action_box::-webkit-scrollbar {
+  display: none;
 }
 
 .list_box .action_box .link_item {
@@ -160,7 +165,8 @@ body {
   font-stretch: normal;
   letter-spacing: 0px;
   color: #949596;
-  padding: 9px 20px;
+  padding: 10px 20px;
+  line-height: 22px;
 }
 
 .list_box .tabls li:hover {
@@ -206,7 +212,6 @@ body {
   background: #fff;
   box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
   border-radius: 10px;
-  min-height: 312px;
 }
 
 .list_box .warp_linK a {
@@ -267,7 +272,7 @@ body {
 
 .list_box .arc_img_list a .center_right .h4_titl_box .h4_tips span {
   display: inline-block;
-  font-family: SimSun;
+  font-family: MicrosoftYaHei;
   font-size: 10px;
   font-weight: normal;
   font-stretch: normal;
@@ -322,6 +327,7 @@ body {
   box-shadow: 5px 8px 15px 0px rgba(222, 222, 222, 0.5);
   border-radius: 10px;
   padding: 20px;
+  min-height: 382px;
 }
 
 .fist_arc {
@@ -331,6 +337,11 @@ body {
 
 .fist_arc li {
   margin: 0 0 8px 0;
+}
+
+.min338 {
+  min-height: 338px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1300px) {
