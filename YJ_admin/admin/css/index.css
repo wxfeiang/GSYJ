@@ -334,7 +334,7 @@ body {
 }
 
 @media screen and (max-width: 1300px) {
-  .h4_tips span {
+  .h4_tips {
     display: none;
   }
 }
