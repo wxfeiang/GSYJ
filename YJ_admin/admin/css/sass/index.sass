@@ -96,7 +96,7 @@ body
     border-radius: 10px
     padding: 20px
     height: 382px
-    overflow-y: auto
+
     -ms-overflow-style: none
     &::-webkit-scrollbar
       display: none
@@ -127,6 +127,8 @@ body
         text-align: center
         width: 100%
         @extend .text_overflow
+  .overflowY
+    overflow-y: auto
   .tabls
     padding: 0 20px 0 0
     li
@@ -175,7 +177,9 @@ body
     a
       display: block
       background: $f7
-      padding: 20px 20px
+      padding: 0  20px
+      height: 70px
+      line-height: 70px
       &:hover
         // background: #fff
       img
@@ -229,12 +233,12 @@ body
         .content
           padding: 0 0 0 10px
           font-family: MicrosoftYaHei
-          font-size: 10px
+          font-size: 14px
           font-weight: normal
           font-stretch: normal
           letter-spacing: 0px
           color: #424242
-          line-height: 20px
+          line-height: 22px
           overflow: hidden
           text-overflow: ellipsis
           display: -webkit-box
@@ -258,7 +262,7 @@ body
   background-color: #ffffff
   box-shadow: $shadow
   border-radius: 10px
-  padding: 20px
+  padding: 20px 20px 20px 10px
   min-height: 382px
 .fist_arc
   box-shadow: none !important
@@ -273,6 +277,14 @@ body
 .min338
   min-height: 338px
   box-sizing: border-box
+.zhishiku
+  li
+    a
+      max-width: 90% !important
+.tewobox
+  li
+    a
+      max-width: 70% !important
 
 @media screen and (max-width: 1300px)
   .h4_tips

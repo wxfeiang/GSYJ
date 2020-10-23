@@ -326,13 +326,14 @@
               公司文件
               <a href="" class="more">更多</a>
             </h3>
-            <ul class="arc_list">
+            <ul class="arc_list tewobox">
               <li class="clearfix">
                 <a href="">
                   <div class="new">
                     <img src="img/news.png" alt="" />
                   </div>
-                  关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
+                  关于印发《信息技术软硬件采购管理制度 （试行）》的通知技术软硬件采购管理制度
+                  （试行）》的通知技术软硬件采购管理制度 （试行）》的通知</a
                 >
                 <span>2019-09-10</span>
               </li>
@@ -345,7 +346,10 @@
                 <span>2019-09-10</span>
               </li>
               <li class="clearfix">
-                <a href="">关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a>
+                <a href=""
+                  >关于印发《信息技术软硬件技术软硬件采购管理制度 （试行）》的术软硬件采购管理制度
+                  （试行）》的术软硬件采购管理制度 （试行）》的通知</a
+                >
                 <span>2019-09-10</span>
               </li>
               <li class="clearfix">
@@ -383,7 +387,7 @@
               <li>通告</li>
             </ul>
             <span class="moreSpan" index="0">更多</span>
-            <ul class="arc_list tab_arc show">
+            <ul class="arc_list tab_arc show tewobox">
               <li class="clearfix">
                 <a href="">
                   <!-- 是否是最新消息显示 -->
@@ -431,7 +435,7 @@
                 <span>2019-09-10</span>
               </li>
             </ul>
-            <ul class="arc_list li_hover tab_arc">
+            <ul class="arc_list li_hover tab_arc tewobox">
               <li class="clearfix">
                 <a href="">第二块显示 222222222 （试行）》的通知</a>
                 <span>2019-09-10</span>
@@ -473,7 +477,7 @@
                 <span>2019-09-10</span>
               </li>
             </ul>
-            <ul class="arc_list li_hover tab_arc">
+            <ul class="arc_list li_hover tab_arc tewobox">
               <li class="clearfix">
                 <a href="">第三块显示测试 33333333 （试行）》的通知</a>
                 <span>2019-09-10</span>
@@ -526,13 +530,14 @@
               知识库
               <a href="" class="more">更多</a>
             </h3>
-            <ul class="arc_list min338">
+            <ul class="arc_list min338 zhishiku">
               <li class="clearfix">
                 <a href="">
                   <div class="new">
                     <img src="img/news.png" alt="" />
                   </div>
-                  关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
+                  关于印发《信息技术软硬件采购管理制度 （试行）》的通知 关于印发《信息技术软硬件采购管理制度
+                  （试行）》的通知 关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
                 >
               </li>
               <li class="clearfix">
@@ -540,6 +545,8 @@
                   <div class="new">
                     <img src="img/news.png" alt="" />
                   </div>
+                  关于印发《信息技术软硬件采购管理制度 （试行）》的通知 关于印发《信息技术软硬件采购管理制度
+                  （试行）》的通知 关于印发《信息技术软硬件采购管理制度 （试行）》的通知
                   关于印发《信息技术软硬件采购管理制度 （试行）》的通知</a
                 >
               </li>
@@ -762,5 +769,11 @@
       $(this).parent('a').css('color', '#000')
       $(this).parent('a').siblings('span').css('color', '#000')
     })
+
+    var len = $('.action_box').children('.link_item').length
+    console.log(len)
+    if (len > 24) {
+      $('.action_box').addClass('overflowY')
+    }
   </script>
 </html>
