@@ -194,7 +194,7 @@
       <!-- 第一块 -->
       <div class="layui-row layui-col-space10">
         <!-- 左边 -->
-        <div class="layui-col-sm7">
+        <div class="layui-col-sm6">
           <div class="list_box dy_height38 li_hover">
             <ul class="clearfix tabls">
               <li class="active">代办 <span class="huibiao">00</span></li>
@@ -306,9 +306,56 @@
             </div>
           </div>
         </div>
-        <div class="layui-col-sm5">
+        <div class="layui-col-sm6">
           <div class="list_box dy_height38 li_hover">
             <h3 class="list_h3">我的日程</h3>
+            <div class="date_box">
+              <div class="layui-row layui-col-space10">
+                <!-- 左边 -->
+                <div class="layui-col-sm7">
+                  <div class="date_center">
+                    <div class="clearfix date_top">
+                      <div class="fl tody">15</div>
+                      <div class="date_action fl">
+                        <i class="layui-icon layui-icon-triangle-r"></i>
+                        <span>2020-10</span>
+                        <i class="layui-icon layui-icon-triangle-r"></i>
+                      </div>
+                      <div class="rigth_action fr">
+                        <span> 今天 </span>
+                        <span class="add"> 添加 </span>
+                      </div>
+                    </div>
+                    <div class="clearfix date_header">
+                      <div class="week_item">日</div>
+                      <div class="week_item">一</div>
+                      <div class="week_item">二</div>
+                      <div class="week_item">三</div>
+                      <div class="week_item">四</div>
+                      <div class="week_item">五</div>
+                      <div class="week_item">六</div>
+                    </div>
+                    <div class="clearfix day_item">
+                      <div class="day_list">
+                        <div class="day_center">
+                          <div class="dayone">1</div>
+                          <div class="daytwo">二十</div>
+                          <div class="dayshark">.</div>
+                        </div>
+                      </div>
+                      <div class="day_list">
+                        <div class="day_center showdate">
+                          <div class="dayone">1</div>
+                          <div class="daytwo">二十</div>
+                          <div class="dayshark">.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="layui-col-sm5">右边</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -328,6 +375,7 @@
   </body>
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
   <script src="layui/layui.js"></script>
+  <script src="js/date_week.js"></script>
   <script>
     // 点击切换tab
     $('.tabls li').each(function (index, elem) {
