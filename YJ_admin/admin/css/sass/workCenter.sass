@@ -28,8 +28,9 @@ body
     font-stretch: normal
     letter-spacing: 0px
     color: #3476f0
-    padding: 10px 20px
-    line-height: 22px
+    padding: 0px 20px
+    line-height: 43px
+    height: 43px
   .more
     display: inline-block
     float: right
@@ -52,7 +53,7 @@ body
     box-shadow: $shadow
     border-radius: 10px
     padding: 20px 20px 16px 10px
-    min-height: 420px
+    min-height: 400px
     // li
     //   margin: 0 0 8px 0
     //   &:hover
@@ -140,6 +141,7 @@ body
         @extend .text_overflow
   .overflowY
     overflow-y: auto
+    padding-bottom: 30px
   .tabls
     padding: 0 20px 0 0
     li
@@ -232,15 +234,23 @@ body
         overflow-y: auto
         background: #fff url('../img/bianjiao.png') no-repeat bottom right
         border-bottom-right-radius: 53px
+        padding-bottom: 50px
     .event
       margin-top: 52px
 .date_box
-  background: #ffffff
-  height: 500px
-  padding: 20px
+  padding: 20px 20px 20px 0
+  background-color: #ffffff
+  box-shadow: 5px 8px 15px 0px rgba(222,222,222,0.5)
+  border-radius: 10px
+  min-height: 400px
+
+  .date_center
+    padding: 0 20px 0 0
+
   .date_top
 
     height: 36px
+    padding: 0 20px
 
     .tody
       font-family: MicrosoftYaHei
@@ -254,9 +264,11 @@ body
     .date_action
       margin: 12px 0 0
       i
+        display: inline-block
         font-size: 10px
+        cursor: pointer
       .icon_left
-        transform: translate(180deg)
+        transform: rotate(180deg)
       span
         font-family: MicrosoftYaHei
         font-size: 14px
@@ -300,23 +312,23 @@ body
       height: 40px
       text-align: center
       padding: 10px  0 0  0
-
       .day_center
-
         width: 40px
         height: 40px
         border-radius: 50%
-        border: 1px solid #2c6ce1
+        // border: 1px solid #2c6ce1
         margin: 0 auto
         cursor: pointer
+        position: relative
         .dayone
           font-family: MicrosoftYaHei
-          font-size: 10px
+          font-size: 16px
           font-weight: normal
           font-stretch: normal
           letter-spacing: 0px
           color: #000000
           text-align: center
+          line-height: 30px
         .daytwo
           font-family: MicrosoftYaHei
           font-size: 10px
@@ -325,23 +337,74 @@ body
           letter-spacing: 0px
           color: #000000
           text-align: center
+          display: none
         .dayshark
-          font-family: MicrosoftYaHei
-          font-weight: normal
-          font-stretch: normal
-          letter-spacing: 0px
-          color: #000000
-          text-align: center
+          width: 4px
+          height: 4px
+          background: rgb(66, 133, 244)
+          margin: 0 auto
+          display: inline-block
+          border-radius: 50%
+          position: absolute
+          bottom: 2px
+          left: 50%
+        &:hover
+          background: #2c6ce1
+          color: #fff
+          .dayone,.daytwo,.dayshark
+            color: #fff
+          .dayshark
+            background: #fff
+      .nullDom
+        display: none
+      .today
+        border: 1px solid #2c6ce1
       .showdate
         background: #2c6ce1
         color: #fff
         .dayone,.daytwo,.dayshark
           color: #fff
+        .dayshark
+          background: #fff
+  .right_riche_box
+    padding: 36px 0 0 0
+    .fichegn_item
+      padding: 0 0 10px 30px
+      border-left: 1px solid  #648eda
+      position: relative
+      .icon_redeo
+        position: absolute
+        top: 0
+        left: -8px
+        font-size: 14px
+        color: #648eda
+        background: #fff
 
+      .richeng_time
+        font-family: MicrosoftYaHei
+        font-size: 13px
+        font-weight: normal
+        font-stretch: normal
+        letter-spacing: 0px
+        color: #000000
+        line-height: 12px
+        margin: 0 0 10px
+      .richeng_dec
+
+        font-family: MicrosoftYaHei
+        font-size: 13px
+        font-weight: normal
+        font-stretch: normal
+        letter-spacing: 0px
+        color: #000000
+        line-height: 14px
+        background-color: #dcf0f9
+        border-radius: 5px
+        padding: 5px 10px
 // 每一块
 .warp_box
   margin: 170px 0 0 0
-  padding: 10px 20px  30px 300px
+  padding: 10px 20px  30px 20px
 .flist_box
   background-color: #ffffff
   box-shadow: $shadow
