@@ -8,17 +8,17 @@ body
   overflow: hidden
   text-overflow: ellipsis
   white-space: nowrap
-// .li_hover
-//   transition: all .3s ease 0s
-//   transform: translate3d(0, 0, 0)
-//   -moz-transform: translate3d(0, 0, 0)
-//   -webkit-transform: translate3d(0, 0, 0)
-//   &:hover
-//     // box-shadow: $shadow
-//     transition: all .3s ease 0s
-//     transform: translate3d(0, -2px, 0)
-//     -moz-transform: translate3d(0, -2px, 0)
-//     -webkit-transform: translate3d(0, -2px, 0)
+.li_hover
+  transition: all .3s ease 0s
+  transform: translate3d(0, 0, 0)
+  -moz-transform: translate3d(0, 0, 0)
+  -webkit-transform: translate3d(0, 0, 0)
+  &:hover
+    // box-shadow: $shadow
+    transition: all .3s ease 0s
+    transform: translate3d(0, -2px, 0)
+    -moz-transform: translate3d(0, -2px, 0)
+    -webkit-transform: translate3d(0, -2px, 0)
 
 .list_box
   .list_h3
@@ -169,7 +169,7 @@ body
   .moreSpan
     display: inline-block
     position: absolute
-    top: 15px
+    top: 12px
     right: 20px
     background-color: #fff
     border-radius: 5px
@@ -190,6 +190,9 @@ body
 .top_bg_box
   padding: 10px
   background: #fff
+  box-shadow: $shadow
+  border-radius: 10px
+  margin: 0 0 20px 0
   .top_box
     padding: 0 0 0 80px
     min-height: 504px
@@ -199,9 +202,7 @@ body
       float: left
       height: 400px
       box-sizing: border-box
-
     .work_item
-
       // width: 14.2%
       margin-right: 30px
       .items_titele
@@ -209,7 +210,7 @@ body
         text-align: center
         font: 17px/30px MicrosoftYaHei
         height: 60px
-        background: url("../img/top_title_bg.png") no-repeat
+        color: #fff
         padding: 25px
         box-sizing: border-box
         background-size: 100%
@@ -217,7 +218,6 @@ body
       .item_center
         max-height: 300px
         background: #fff
-        // margin-left: 6px
         box-shadow: 6px 5px 8px 0px #f1f2f5
         padding: 10px 0
         a
@@ -235,14 +235,16 @@ body
         background: #fff url('../img/bianjiao.png') no-repeat bottom right
         border-bottom-right-radius: 53px
         padding-bottom: 50px
+
     .event
       margin-top: 52px
+
 .date_box
   padding: 20px 20px 20px 0
   background-color: #ffffff
   box-shadow: 5px 8px 15px 0px rgba(222,222,222,0.5)
   border-radius: 10px
-  min-height: 400px
+  min-height: 395px
 
   .date_center
     padding: 0 20px 0 0
@@ -367,19 +369,40 @@ body
         .dayshark
           background: #fff
   .right_riche_box
-    padding: 36px 0 0 0
+    margin: 36px 0 0 0
+    height: 300px
+    overflow-y: auto
+    box-sizing: border-box
+
+    &::after
+      border-left: 1px solid #648eda
+      content: ''
+      clear: both
+      display: block
+      width: 1px
+      height: 90%
+      position: absolute
+      left: 13px
+      top: 43px
+      z-index: 1
+    .bootm_btns
+      position: absolute
+      width: 17px
+      height: 17px
+      bottom: -22px
+      left: 4px
+      cursor: pointer
     .fichegn_item
       padding: 0 0 10px 30px
-      border-left: 1px solid  #648eda
       position: relative
       .icon_redeo
         position: absolute
         top: 0
-        left: -8px
-        font-size: 14px
+        left: 0
+        font-size: 17px
         color: #648eda
         background: #fff
-
+        z-index: 9
       .richeng_time
         font-family: MicrosoftYaHei
         font-size: 13px
@@ -390,7 +413,6 @@ body
         line-height: 12px
         margin: 0 0 10px
       .richeng_dec
-
         font-family: MicrosoftYaHei
         font-size: 13px
         font-weight: normal
@@ -421,6 +443,9 @@ body
 .min338
   min-height: 338px
   box-sizing: border-box
+@for $i from 1 through 7
+  .itembg-#{$i}
+    background: url("../img/top_title_bg#{$i}.png") no-repeat
 
 @media screen and (max-width: 1300px)
   .h4_tips
