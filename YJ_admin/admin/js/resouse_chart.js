@@ -191,19 +191,21 @@ age_chart_option = {
             [
               {
                 offset: 0,
-                color: '#3f3e76 ', // 0% 处的颜色
+                color: '#7e88f3', // 100% 处的颜色
               },
               {
                 offset: 0.3,
-                color: '#7e7ceb', // 60% 处的颜色
+                color: '#7e98f3', // 60% 处的颜色
               },
               {
                 offset: 0.8,
-                color: '#7ca2ef', // 60% 处的颜色
+
+                color: '#7eaaf3', // 60% 处的颜色
               },
               {
                 offset: 1,
-                color: '#79c7f3', // 100% 处的颜色
+
+                color: '#7ac1f3 ', // 0% 处的颜色
               },
             ],
             false
