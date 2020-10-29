@@ -65,7 +65,7 @@ function rederDate(dateArr) {
     var month = arr[1]
     var today = arr[2]
     //  发送请求数渲染右边
-
+    $('.tody').html(today)
     clickDate = $(this).attr('date').split('-')
     console.log(clickDate)
   })
