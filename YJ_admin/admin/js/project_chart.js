@@ -754,7 +754,7 @@ option = {
         { name: '武汉', value: 273 },
         { name: '大庆', value: 279 },
       ]),
-      symbolSize: 5,
+      symbolSize: 10,
       //直接在点上显示标签
       label: {
         show: false,
