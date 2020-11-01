@@ -66,16 +66,16 @@
         <div class="sc_nav" id="sc_nav">
           <ul class="clearfix">
             <li class="fl">
-              <a href="" class="active">信息门户</a>
+              <a href="index.html" class="active">信息门户</a>
             </li>
             <li class="fl">
-              <a href="">工作中心</a>
+              <a href="workCenter.html">工作中心</a>
             </li>
             <li class="fl">
-              <a href="">人力资源管理</a>
+              <a href="resources.html">人力资源管理</a>
             </li>
             <li class="fl">
-              <a href="">项目管理</a>
+              <a href="project.html">项目管理</a>
             </li>
             <li class="fl">
               <a href="">市场开发管理</a>
@@ -115,33 +115,64 @@
                     <div class="project_titile">项目总数</div>
                     <div class="project_num">174项</div>
                     <div class="project_poros">
-                      <div class="pros_item"></div>
+                      <div class="fl pros_item">
+                        <div class="layui-progress">
+                          <div class="layui-progress-bar pros_dy_bars" lay-percent="80%"></div>
+                        </div>
+                      </div>
+                      <div class="fr pros_num">80%</div>
                     </div>
                   </div>
                   <div class="lenget_item lenget_item_bg_2">
                     <div class="project_titile">项目总数</div>
                     <div class="project_num">174项</div>
                     <div class="project_poros">
-                      <div class="pros_item"></div>
+                      <div class="fl pros_item">
+                        <div class="layui-progress">
+                          <div class="layui-progress-bar pros_dy_bars" lay-percent="80%"></div>
+                        </div>
+                      </div>
+                      <div class="fr pros_num">80%</div>
                     </div>
                   </div>
                   <div class="lenget_item lenget_item_bg_3">
                     <div class="project_titile">项目总数</div>
                     <div class="project_num">174项</div>
                     <div class="project_poros">
-                      <div class="pros_item"></div>
+                      <div class="fl pros_item">
+                        <div class="layui-progress">
+                          <div class="layui-progress-bar pros_dy_bars" lay-percent="80%"></div>
+                        </div>
+                      </div>
+                      <div class="fr pros_num">80%</div>
                     </div>
                   </div>
                   <div class="lenget_item lenget_item_bg_4">
                     <div class="project_titile">项目总数</div>
                     <div class="project_num">174项</div>
                     <div class="project_poros">
-                      <div class="pros_item"></div>
+                      <div class="fl pros_item">
+                        <div class="layui-progress">
+                          <div class="layui-progress-bar pros_dy_bars" lay-percent="80%"></div>
+                        </div>
+                      </div>
+                      <div class="fr pros_num">80%</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="layui-col-sm9">中国地图</div>
+              <div class="layui-col-sm9">
+                <div class="china_box">
+                  <div class="chinamap" id="chinamap"></div>
+                  <!-- 地图左下角显示 -->
+                  <div class="map_left_tips">
+                    <!-- <p class="tips_title"></p>
+                    <p class="tips_desc"></p>
+                    <p class="tips_desc"></p>
+                    <p class="tips_desc"></p> -->
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -417,16 +448,15 @@
         <a href=""> 陇ICP备18003646号-1 </a>
         <a href=""><img src="img/beianh.png" alt="" /> 甘公网安备 62010502001084号</a>
       </p>
-      <!-- <p>
-       
-      </p> -->
     </div>
   </body>
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
 
   <script src="layui/layui.js"></script>
   <script src="js/echarts.min.js"></script>
+  <script src="js/china.js"></script>
   <script src="js/project_chart.js"></script>
+
   <script>
     $('.new').each(function () {
       $(this).parent('a').css('color', '#000')
