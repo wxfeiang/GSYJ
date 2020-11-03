@@ -510,35 +510,14 @@ option = {
     },
   },
 
-  //左下lengend
-  // visualMap: {
-  //   min: 0, //最小
-  //   max: 300, //最大
-  //   splitNumber: 5, //共分5层
-  //   color: ['#ff6300', '#eac736', '#50a3ba'], //颜色从高到低依次渐变
-  //   textStyle: {
-  //     color: '#fff',
-  //   },
-  // },
-  // visualMap: [
-  //   {
-  //     type: 'piecewise', // continuous连续的 piecewise分段
-  //     pieces: [
-  //       { gt: 10000 }, // (10000, Infinity]
-  //       { gt: 1000, lte: 9999 }, // (1000, 9999]
-  //       { gt: 100, lte: 999 }, // (100, 999]
-  //       { gt: 10, lte: 99 }, // (10, 99]
-  //       { gt: 0, lte: 9 }, // (0, 9]
-  //     ],
-  //     inRange: {
-  //       color: ['#fdebcf', '#f59e83', '#e55a4e', '#cb2a2f', '#811c24'],
-  //     },
-  //   },
-  // ],
   //地图区域样式
   geo: {
     map: 'china',
     aspectScale: 0.75,
+
+    zoom: 1.2, //视觉比例大小,1.2即为原有大小的1.2倍
+    roam: false, //是否开启鼠标缩放和平移漫游。默认不开启。可以不用设置,如果只想要开启缩放或者平移，可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+
     label: {
       emphasis: {
         show: false,
@@ -547,15 +526,30 @@ option = {
     itemStyle: {
       //未激活样式
       normal: {
-        areaColor: '#77bdd3',
-        borderColor: '#fff',
+        areaColor: '#2a91e2',
+        borderColor: '#666',
       },
       //激活样式
       emphasis: {
-        areaColor: '#4fa1c1',
+        areaColor: '#306de8',
       },
     },
+    regions: [
+      {
+        name: '南海诸岛',
+        value: 0,
+        itemStyle: {
+          normal: {
+            opacity: 0,
+            label: {
+              show: false,
+            },
+          },
+        },
+      },
+    ],
   },
+
   //数据
   series: [
     {
@@ -765,7 +759,7 @@ option = {
       zlevel: 6,
       //标签的样式
       itemStyle: {
-        //  normal: { color: '#5be7f7' },  点的颜色
+        normal: { color: '#5be7f7' }, //点的颜色
         emphasis: {
           borderColor: '#fff',
           borderWidth: 1,
