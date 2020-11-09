@@ -775,7 +775,7 @@ china_chart.on('click', function (params) {
   console.log('点击事件获取到的参数')
   console.log(params)
   var str = `
-    <p class="tips_title">${params.name}项目</p>
+    <p class="tips_title"><a href="#"> ${params.name}项目 </a></p>
     <p class="tips_desc">承   建：第十工程分公司${params.name}che</p>
     <p class="tips_desc">建设地：甘肃省兰州市安宁区</p>
     <p class="tips_desc">周   期：2019/1-2020/7</p>
