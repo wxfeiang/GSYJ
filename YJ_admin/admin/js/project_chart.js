@@ -1,3 +1,129 @@
+// 项目管理统计
+var project_chart = echarts.init(document.getElementById('project_chart'))
+var salvProName = [
+  '第一工程公司',
+  '第二工程公司',
+  '第三工程公司',
+  '第四工程公司',
+  '第五工程公司',
+  '第六工程公司',
+  '第七工程公司',
+  '第八工程公司',
+  '第十工程公司',
+  '第一安装公司',
+  '第二安装公司',
+  '新疆公司',
+  '阜外公司',
+  '无锡公司',
+]
+var salvProValue = [239, 181, 154, 144, 135, 117, 74, 72, 67, 45, 78, 126, 13, 145]
+var salvProMax = [] //背景按最大值
+for (let i = 0; i < salvProValue.length; i++) {
+  salvProMax.push(salvProValue[0])
+}
+project_chart_option = {
+  grid: {
+    left: '2%',
+    right: '2%',
+    bottom: '2%',
+    top: '2%',
+    containLabel: true,
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'none',
+    },
+    formatter: function (params) {
+      return params[0].name + ' : ' + params[0].value
+    },
+  },
+  xAxis: {
+    show: false,
+    type: 'value',
+  },
+  yAxis: [
+    {
+      type: 'category',
+      inverse: true,
+      axisLabel: {
+        show: true,
+        textStyle: {
+          color: '#666666',
+          fontSize: 12,
+          width: '20%',
+        },
+      },
+      splitLine: {
+        show: false,
+      },
+      axisTick: {
+        show: false,
+      },
+      axisLine: {
+        show: false,
+      },
+      data: salvProName,
+    },
+    {
+      type: 'category',
+      inverse: true,
+      axisTick: 'none',
+      axisLine: 'none',
+      show: true,
+      axisLabel: {
+        textStyle: {
+          color: '#666666',
+          fontSize: 12,
+        },
+      },
+      data: salvProValue,
+    },
+  ],
+  series: [
+    {
+      name: '值',
+      type: 'bar',
+      zlevel: 1,
+      itemStyle: {
+        normal: {
+          barBorderRadius: 10,
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            {
+              offset: 0,
+              color: '#3094ff',
+            },
+            {
+              offset: 0.5,
+              color: '#7340ff',
+            },
+            {
+              offset: 1,
+              color: '#cf179c',
+            },
+          ]),
+        },
+      },
+      barWidth: 10,
+      data: salvProValue,
+    },
+    {
+      name: '背景',
+      type: 'bar',
+      barWidth: 10,
+      barGap: '-100%',
+      data: salvProMax,
+      itemStyle: {
+        normal: {
+          color: '#ccc',
+          barBorderRadius: 30,
+        },
+      },
+    },
+  ],
+}
+project_chart.setOption(project_chart_option)
+
 var gender_chart = echarts.init(document.getElementById('gender_chart'))
 gender_chart_option = {
   tooltip: {
@@ -7,7 +133,7 @@ gender_chart_option = {
 
   legend: {
     left: 'center', //图例距离左的距离
-    bottom: '10',
+    bottom: '10%',
   },
 
   calculable: true,
@@ -16,7 +142,7 @@ gender_chart_option = {
       name: '合同管理',
       type: 'pie',
       radius: ['10%', '45%'],
-      center: ['50%', '50%'],
+      center: ['50%', '40%'],
       roseType: 'area',
       data: [
         {
@@ -110,7 +236,7 @@ gender_chart_option = {
 }
 gender_chart.setOption(gender_chart_option)
 
-// 性别占比
+//  公司产值
 var age_chart = echarts.init(document.getElementById('age_chart'))
 age_chart_option = {
   // title: {
@@ -140,7 +266,7 @@ age_chart_option = {
   grid: {
     left: '4%',
     right: '4%',
-    bottom: '5%',
+    bottom: '2%',
     containLabel: true,
   },
   xAxis: [
@@ -787,5 +913,5 @@ china_chart.on('click', function (params) {
 $(window).resize(function () {
   gender_chart.resize()
   age_chart.resize()
-  china_chart.resize()
+  project_chart.resize()
 })

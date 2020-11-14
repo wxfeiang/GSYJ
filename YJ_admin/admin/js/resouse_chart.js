@@ -1,3 +1,113 @@
+//  学历统计图xueli_chart
+var xueli_chart = echarts.init(document.getElementById('xueli_chart'))
+var salvProName = ['全日制本科', '全日制大专', '成人本科', '高中', '全日制硕士', '在职硕士', '中专', '博士', '初中']
+var salvProValue = [239, 181, 154, 144, 135, 117, 74, 72, 67]
+var salvProMax = [] //背景按最大值
+for (let i = 0; i < salvProValue.length; i++) {
+  salvProMax.push(salvProValue[0])
+}
+xueli_chart_option = {
+  grid: {
+    left: '2%',
+    right: '2%',
+    bottom: '2%',
+    top: '2%',
+    containLabel: true,
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'none',
+    },
+    formatter: function (params) {
+      return params[0].name + ' : ' + params[0].value
+    },
+  },
+  xAxis: {
+    show: false,
+    type: 'value',
+  },
+  yAxis: [
+    {
+      type: 'category',
+      inverse: true,
+      axisLabel: {
+        show: true,
+        textStyle: {
+          color: '#666666',
+          fontSize: 12,
+          width: '20%',
+        },
+      },
+      splitLine: {
+        show: false,
+      },
+      axisTick: {
+        show: false,
+      },
+      axisLine: {
+        show: false,
+      },
+      data: salvProName,
+    },
+    {
+      type: 'category',
+      inverse: true,
+      axisTick: 'none',
+      axisLine: 'none',
+      show: true,
+      axisLabel: {
+        textStyle: {
+          color: '#666666',
+          fontSize: 12,
+        },
+      },
+      data: salvProValue,
+    },
+  ],
+  series: [
+    {
+      name: '值',
+      type: 'bar',
+      zlevel: 1,
+      itemStyle: {
+        normal: {
+          barBorderRadius: 10,
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            {
+              offset: 0,
+              color: '#3094ff',
+            },
+            {
+              offset: 0.5,
+              color: '#7340ff',
+            },
+            {
+              offset: 1,
+              color: '#cf179c',
+            },
+          ]),
+        },
+      },
+      barWidth: 10,
+      data: salvProValue,
+    },
+    {
+      name: '背景',
+      type: 'bar',
+      barWidth: 10,
+      barGap: '-100%',
+      data: salvProMax,
+      itemStyle: {
+        normal: {
+          color: '#ccc',
+          barBorderRadius: 30,
+        },
+      },
+    },
+  ],
+}
+xueli_chart.setOption(xueli_chart_option)
 // 性别占比
 var gender_chart = echarts.init(document.getElementById('gender_chart'))
 gender_chart_option = {
@@ -221,4 +331,5 @@ age_chart.setOption(age_chart_option)
 $(window).resize(function () {
   gender_chart.resize()
   age_chart.resize()
+  xueli_chart.resize()
 })
