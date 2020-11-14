@@ -3,9 +3,9 @@ var gender_chart = echarts.init(document.getElementById('gender_chart'))
 gender_chart_option = {
   tooltip: {
     trigger: 'axis',
-    // axisPointer: {
-    //   type: 'shadow',
-    // },
+    axisPointer: {
+      type: 'shadow',
+    },
   },
   legend: {
     itemWidth: 10,
@@ -84,9 +84,9 @@ gender_chart_option = {
         normal: {
           barBorderRadius: 10, // 统一设置四个角的圆角大小
           color: '#03dffc',
-          lineStyle: {
-            color: '#f7cb4a',
-          },
+          // lineStyle: {
+          //   color: '#f7cb4a',
+          // },
         },
       },
     },
@@ -100,9 +100,9 @@ gender_chart_option = {
           barBorderRadius: 10, // 统一设置四个角的圆角大小
           color: '#2c6ce1',
 
-          lineStyle: {
-            color: '#58cb97',
-          },
+          // lineStyle: {
+          //   color: '#58cb97',
+          // },
         },
       },
     },
