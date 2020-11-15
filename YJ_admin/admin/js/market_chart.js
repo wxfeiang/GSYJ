@@ -79,6 +79,7 @@ gender_chart_option = {
       name: '年投标数',
       type: 'bar',
       data: [325, 2438, 3100, 1294, 1401],
+
       itemStyle: {
         barBorderRadius: 10, // 统一设置四个角的圆角大小
         normal: {
@@ -94,6 +95,7 @@ gender_chart_option = {
       name: '年中标数',
       type: 'bar',
       data: [625, 2338, 3100, 1194, 1341],
+
       itemStyle: {
         barBorderRadius: 10, // 统一设置四个角的圆角大小
         normal: {
@@ -108,6 +110,8 @@ gender_chart_option = {
     },
   ],
   barMaxWidth: 20, //最大宽度
+
+  barGap: 0,
 }
 gender_chart.setOption(gender_chart_option)
 
