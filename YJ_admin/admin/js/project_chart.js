@@ -380,28 +380,6 @@ age_chart_option = {
 age_chart.setOption(age_chart_option)
 //  地图部分
 var china_chart = echarts.init(document.getElementById('chinamap'))
-var geoCoordMap = {
-  //自定义城市坐标
-  青岛: [120.33, 36.07],
-  厦门: [118.1, 24.46],
-  宁波: [121.56, 29.86],
-  深圳: [114.07, 22.62],
-  大连: [121.62, 38.92],
-}
-
-var convertData = function (data) {
-  var res = []
-  for (var i = 0; i < data.length; i++) {
-    var geoCoord = geoCoordMap[data[i].name]
-    if (geoCoord) {
-      res.push({
-        name: data[i].name,
-        value: geoCoord.concat(data[i].value),
-      })
-    }
-  }
-  return res
-}
 //自定义城市坐标菜单
 var geoCoordMap = {
   海门: [121.15, 31.89],
