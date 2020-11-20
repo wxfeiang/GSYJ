@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>侧边导航页面</title>
+    <title>信息门户首页</title>
     <link rel="stylesheet" href="css/rest.css" />
     <link rel="stylesheet" href="layui/css/layui.css" />
     <link rel="stylesheet" href="css/public.css" />
-    <link rel="stylesheet" href="css/sider.css" />
   </head>
 
   <body>
@@ -78,7 +77,7 @@
               <a href="project.html">项目管理</a>
             </li>
             <li class="fl">
-              <a href="">市场开发管理</a>
+              <a href="market.html">市场开发管理</a>
             </li>
             <li class="fl">
               <a href="">报表管理 </a>
@@ -99,51 +98,11 @@
         </div>
       </div>
     </div>
-    <!-- 侧边导航 -->
-    <div class="sider_warp" id="dy_nav">
-      <div class="sider_top">
-        <div class="sider_img_box">
-          <img src="img/spware.jpg" alt="" />
-        </div>
-        <p>王鹏</p>
-        <p>互联网金融部</p>
-      </div>
-      <!-- 项目名称 -->
-      <div class="sider_pooject">这里是项目名称</div>
-      <!-- 导航链接主体 -->
-      <div id="menu" class="layui-side layui-bg-dy_black"></div>
-    </div>
-
-    <div class="ifrem" style="margin-top: 158px; margin-left: 210px">
-      <iframe id="dy_ifrem" style="width: 100%; height: 800px; border: none" src="min.html"></iframe>
-    </div>
   </body>
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-
   <script src="layui/layui.js"></script>
-  <script src="js/sider.js"></script>
+  <script src="js/date_week.js"></script>
   <script>
-    layui.use('carousel', function () {
-      var carousel = layui.carousel
-      //建造实例
-      carousel.render({
-        elem: '#test1',
-        width: '100%', //设置容器宽度
-        arrow: 'hover', //始终显示箭头
-        height: '100%',
-        indicator: 'inside',
-        anim: 'fade',
-      })
-    })
-
-    //  顶部搜索事件
-    $('#serch').click(function () {
-      var serch_msg = $('#serch_msg').val()
-      console.log(serch_msg)
-      if (serch_msg == '' || serch_msg == null) {
-        alert('输入内容')
-      }
-    })
     // 点击切换tab
     $('.tabls li').each(function (index, elem) {
       console.log($(this))
@@ -159,29 +118,20 @@
         $('.moreSpan').attr('index', index)
       })
     })
-    $('.moreSpan').click(function () {
-      var index = $(this).attr('index')
-      console.log(index)
+    $('.work_item').each(function (index) {
+      if (index % 2 == 1) {
+        $('.work_item').eq(index).addClass('event')
+      }
     })
-    $('.warp_linK a img').each(function () {
-      $(this).hover(
-        function () {
-          $(this).removeClass('img_hover')
-        },
-        function () {
-          $(this).addClass('img_hover')
-        }
-      )
+    $('.item_center').each(function (index) {
+      $(this)
+        .find('a')
+        .each(function (i) {
+          // console.log(i)
+          if (i > 6) {
+            $(this).parent().addClass('overflowY')
+          }
+        })
     })
-    $('.new').each(function () {
-      $(this).parent('a').css('color', '#000')
-      $(this).parent('a').siblings('span').css('color', '#000')
-    })
-
-    var len = $('.action_box').children('.link_item').length
-    console.log(len)
-    if (len > 24) {
-      $('.action_box').addClass('overflowY')
-    }
   </script>
 </html>
