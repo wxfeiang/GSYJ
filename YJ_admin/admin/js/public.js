@@ -134,7 +134,7 @@ layui.use('element', function () {
                     {
                       name: '5页面',
                       url: 'pages/table.html',
-                      icon: 'layui-icon-snowflake',
+                      icon: 'www.baidu.com',
                       childMenus: null,
                     },
                   ],
@@ -143,7 +143,7 @@ layui.use('element', function () {
             },
             {
               name: 'table页面',
-              url: 'pages/table.html',
+              url: 'http://www.layui.com',
               icon: 'layui-icon-snowflake',
               childMenus: null,
             },
@@ -194,6 +194,8 @@ layui.use('element', function () {
     if (typeof thisPage != 'undefined') {
       if ($('.layui-body iframe').attr('src') == thisPage) return
       $('.layui-body iframe').attr('src', thisPage)
+
+      $('#dy_ifrem').attr('src', thisPage)
     }
   })
 })

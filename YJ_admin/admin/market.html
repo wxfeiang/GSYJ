@@ -108,11 +108,16 @@
         <div class="layui-col-sm3">
           <div class="list_box li_hover">
             <h3 class="list_h3"></h3>
-            <div class="bill_box">
-              <h3 class="bill_title">喜报！！！</h3>
-              <p class="bill_desc">你所购买的彩票中了500万！</p>
-              <div class="bill_img">
-                <img src="img/bill.png" alt="" />
+            <!--  swiper -->
+            <div class="layui-carousel" id="test1">
+              <div carousel-item>
+                <div class="bill_box">
+                  <h3 class="bill_title">喜报！！！</h3>
+                  <p class="bill_desc">你所购买的彩票中了500万！</p>
+                  <div class="bill_img">
+                    <img src="img/bill.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -255,6 +260,18 @@
     })
     layui.use('element', function () {
       var element = layui.element
+    })
+    layui.use('carousel', function () {
+      var carousel = layui.carousel
+      //建造实例
+      carousel.render({
+        elem: '#test1',
+        width: '100%', //设置容器宽度
+        arrow: 'hover', //始终显示箭头
+        height: '100%',
+        indicator: 'inside',
+        anim: 'fade',
+      })
     })
   </script>
 </html>
