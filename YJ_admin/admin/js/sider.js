@@ -233,3 +233,29 @@ function getChildMenu(subMenu, num) {
   }
   return subStr
 }
+
+$('#sider_btn').click(function () {
+  if ($(this).attr('data-state') == 'on') {
+    $(this).addClass('active_off').attr('data-state', 'off')
+    $('#ifrem').animate(
+      {
+        left: '0',
+      },
+      300,
+      function () {
+        $(this).addClass('ifrem_off')
+      }
+    )
+  } else if ($(this).attr('data-state') == 'off') {
+    $(this).removeClass('active_off').attr('data-state', 'on')
+    $('#ifrem').animate(
+      {
+        left: '210px',
+      },
+      300,
+      function () {
+        $(this).removeClass('ifrem_off')
+      }
+    )
+  }
+})
