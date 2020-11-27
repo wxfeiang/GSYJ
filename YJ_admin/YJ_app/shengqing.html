@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>申请表</title>
+
+    <link rel="stylesheet" href="css/mui.min.css" />
+    <link rel="stylesheet" href="css/rest.css" />
+    <link rel="stylesheet" href="css/shenqing.css" />
+    <script src="js/remScale.js"></script>
+  </head>
+  <body>
+    <div class="warp_box">
+      <h3>申请人</h3>
+      <div class="pepe_form" id="applicant">
+        <div class="from_item">
+          <div class="item_grop">
+            <div class="name_title">姓名</div>
+            <input type="text" class="name_inp" placeholder="申请人姓名" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">姓别</div>
+            <select type="text" class="select_ax">
+              <option value="2">未知</option>
+              <option value="0">男</option>
+              <option value="1">女</option>
+            </select>
+          </div>
+          <div class="item_grop">
+            <div class="name_title">身份证号码</div>
+            <input type="text" class="name_inp" placeholder="申请人身份证号码" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">电话号码</div>
+            <input type="text" class="name_inp" placeholder="申请人电话号码" />
+          </div>
+        </div>
+      </div>
+
+      <h3>被申请人</h3>
+      <div id="the_respondent" class="pepe_form">
+        <div class="action" id="action_add">
+          <span class="mui-icon mui-icon-plusempty"></span>
+        </div>
+        <div class="from_item">
+          <div class="item_grop">
+            <div class="name_title">与申请人关系</div>
+            <input type="text" class="name_inp" placeholder="申请人姓名" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">姓名</div>
+            <input type="text" class="name_inp" placeholder="申请人姓名" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">姓别</div>
+            <select type="text" class="select_ax">
+              <option value="2">未知</option>
+              <option value="0">男</option>
+              <option value="1">女</option>
+            </select>
+          </div>
+          <div class="item_grop">
+            <div class="name_title">身份证号码</div>
+            <input type="text" class="name_inp" placeholder="申请人身份证号码" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">电话号码</div>
+            <input type="text" class="name_inp" placeholder="申请人电话号码" />
+          </div>
+        </div>
+      </div>
+      <div class="pepe_form">
+        <div class="from_item">
+          <div class="item_grop">
+            <div class="name_title">用途</div>
+            <textarea rows="3" cols="30" placeholder="请输入申请用途"> </textarea>
+          </div>
+        </div>
+      </div>
+      <div class="btn_box">提交</div>
+    </div>
+  </body>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    //点击加号
+    $('#action_add').click(function () {
+      var str = `
+        <div class="from_item">
+          <div class="action action_jian">
+            <span class="mui-icon mui-icon-trash"></span>
+          </div>
+          <div class="item_grop">
+            <div class="name_title">与申请人关系</div>
+            <input type="text" class="name_inp" placeholder="申请人姓名" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">姓名</div>
+            <input type="text" class="name_inp" placeholder="申请人姓名" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">姓别</div>
+            <select type="text" class="select_ax">
+              <option value="2">未知</option>
+              <option value="0">男</option>
+              <option value="1">女</option>
+            </select>
+          </div>
+          <div class="item_grop">
+            <div class="name_title">身份证号码</div>
+            <input type="text" class="name_inp" placeholder="申请人身份证号码" />
+          </div>
+          <div class="item_grop">
+            <div class="name_title">电话号码</div>
+            <input type="text" class="name_inp" placeholder="申请人电话号码" />
+          </div>
+        </div>
+       `
+      $('#the_respondent').append(str)
+      jian()
+    })
+    function jian() {
+      $('.action_jian').click(function () {
+        $(this).parent().remove()
+      })
+    }
+  </script>
+</html>
