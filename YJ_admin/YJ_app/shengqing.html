@@ -12,73 +12,79 @@
   </head>
   <body>
     <div class="warp_box">
+      <div class="shen_header">
+        <img src="images/logo.png" alt="logo" />
+        户籍卡借用（领用）申请
+      </div>
       <h3>申请人</h3>
-      <div class="pepe_form" id="applicant">
-        <div class="from_item">
-          <div class="item_grop">
-            <div class="name_title">姓名</div>
-            <input type="text" class="name_inp" placeholder="申请人姓名" />
-          </div>
-          <div class="item_grop">
-            <div class="name_title">姓别</div>
-            <select type="text" class="select_ax">
-              <option value="2">未知</option>
-              <option value="0">男</option>
-              <option value="1">女</option>
-            </select>
-          </div>
-          <div class="item_grop">
-            <div class="name_title">身份证号码</div>
-            <input type="text" class="name_inp" placeholder="申请人身份证号码" />
-          </div>
-          <div class="item_grop">
-            <div class="name_title">电话号码</div>
-            <input type="text" class="name_inp" placeholder="申请人电话号码" />
+      <form class="" report-submit="false" bindsubmit="" bindreset="">
+        <div class="pepe_form" id="applicant">
+          <div class="from_item">
+            <div class="item_grop">
+              <div class="name_title">姓名</div>
+              <input type="text" class="name_inp" placeholder="申请人姓名" />
+            </div>
+            <div class="item_grop">
+              <div class="name_title">姓别</div>
+              <select type="text" class="select_ax">
+                <option value="2">未知</option>
+                <option value="0">男</option>
+                <option value="1">女</option>
+              </select>
+            </div>
+            <div class="item_grop">
+              <div class="name_title">身份证号码</div>
+              <input type="text" class="name_inp" placeholder="申请人身份证号码" />
+            </div>
+            <div class="item_grop">
+              <div class="name_title">电话号码</div>
+              <input type="text" class="name_inp" placeholder="申请人电话号码" />
+            </div>
           </div>
         </div>
-      </div>
 
-      <h3>被申请人</h3>
-      <div id="the_respondent" class="pepe_form">
-        <div class="action" id="action_add">
-          <span class="mui-icon mui-icon-plusempty"></span>
-        </div>
-        <div class="from_item">
-          <div class="item_grop">
-            <div class="name_title">与申请人关系</div>
-            <input type="text" class="name_inp" placeholder="申请人姓名" />
+        <h3>被申请人</h3>
+        <div id="the_respondent" class="pepe_form">
+          <div class="action" id="action_add">
+            <span class="mui-icon mui-icon-plusempty"></span>
           </div>
-          <div class="item_grop">
-            <div class="name_title">姓名</div>
-            <input type="text" class="name_inp" placeholder="申请人姓名" />
-          </div>
-          <div class="item_grop">
-            <div class="name_title">姓别</div>
-            <select type="text" class="select_ax">
-              <option value="2">未知</option>
-              <option value="0">男</option>
-              <option value="1">女</option>
-            </select>
-          </div>
-          <div class="item_grop">
-            <div class="name_title">身份证号码</div>
-            <input type="text" class="name_inp" placeholder="申请人身份证号码" />
-          </div>
-          <div class="item_grop">
-            <div class="name_title">电话号码</div>
-            <input type="text" class="name_inp" placeholder="申请人电话号码" />
-          </div>
-        </div>
-      </div>
-      <div class="pepe_form">
-        <div class="from_item">
-          <div class="item_grop">
-            <div class="name_title">用途</div>
-            <textarea rows="3" cols="30" placeholder="请输入申请用途"> </textarea>
+          <div class="from_item">
+            <div class="item_grop">
+              <div class="name_title">与申请人关系</div>
+              <input type="text" class="name_inp" placeholder="申请人姓名" />
+            </div>
+            <div class="item_grop">
+              <div class="name_title">姓名</div>
+              <input type="text" class="name_inp" placeholder="申请人姓名" />
+            </div>
+            <div class="item_grop">
+              <div class="name_title">姓别</div>
+              <select type="text" class="select_ax">
+                <option value="2">未知</option>
+                <option value="0">男</option>
+                <option value="1">女</option>
+              </select>
+            </div>
+            <div class="item_grop">
+              <div class="name_title">身份证号码</div>
+              <input type="text" class="name_inp" placeholder="申请人身份证号码" />
+            </div>
+            <div class="item_grop">
+              <div class="name_title">电话号码</div>
+              <input type="text" class="name_inp" placeholder="申请人电话号码" />
+            </div>
           </div>
         </div>
-      </div>
-      <div class="btn_box">提交</div>
+        <div class="pepe_form">
+          <div class="from_item">
+            <div class="item_grop">
+              <div class="name_title">用途</div>
+              <textarea rows="3" cols="30" placeholder="请输入申请用途"> </textarea>
+            </div>
+          </div>
+        </div>
+        <button class="btn_box" text="sublimt">提交</button>
+      </form>
     </div>
   </body>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

@@ -2,11 +2,21 @@
     $rem: 75px
     @return ($px / $rem)+rem
 .warp_box
-    padding: rem(20px)
+    padding: rem(30px) rem(20px) rem(20px)
+    background: url(../images/bg.jpg) no-repeat top center
+    background-size: cover
+    .shen_header
+        text-align: center
+        line-height: rem(80px)
+        font-size: rem(40px)
+        img
+            width: rem(80px)
+            height: rem(80px)
     h3
         text-align: center
         padding: rem(10px) rem(20px)
         line-height: rem(40px)
+        font-size: rem(30px)
     .pepe_form
         padding: rem(20px)  0
         position: relative
@@ -14,10 +24,11 @@
             position: absolute
             top: rem(20px)
             right: rem(30px)
-            border: 1px solid #999
+            border: 1px solid #fff
             border-radius: 50%
-            color: #999
+
             z-index: 999
+            color: #fff
 
     .from_item
         position: relative
@@ -33,10 +44,11 @@
             position: absolute
             top: rem(1px)
             right: rem(30px)
-            border: 1px solid #999
+            border: 1px solid #fff
             border-radius: 50%
-            color: #999
+
             z-index: 999
+            color: #fff
     textarea
         // height: rem(60px)
         border: 1px solid rgba(0,0,0,.2)
