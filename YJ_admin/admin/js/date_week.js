@@ -46,7 +46,7 @@ function rederDate(dateArr) {
   for (i = 0; i < dateArr.length; i++) {
     var shark = dateArr[i].shark == 1 ? `<div class="dayshark">.</div>` : ''
     var tody = dateArr[i].tdody == curDate && dateArr[i].month == curMonth ? 'today' : ''
-    var nullDom = dateArr[i].tdody == '' ? 'nullDom' : ''
+    var nullDom = dateArr[i].tdody == ' ' ? 'nullDom' : ''
     str += `   
      <div class="day_list" date="${dateArr[i].year}-${dateArr[i].month * 1 + 1}-${dateArr[i].tdody}" noli="${
       dateArr[i].noli.IMonthCn
