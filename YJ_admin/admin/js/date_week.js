@@ -48,9 +48,9 @@ function rederDate(dateArr) {
     var tody = dateArr[i].tdody == curDate && dateArr[i].month == curMonth ? 'today' : ''
     var nullDom = dateArr[i].tdody == ' ' ? 'nullDom' : ''
     str += `   
-     <div class="day_list" date="${dateArr[i].year}-${dateArr[i].month * 1 + 1}-${dateArr[i].tdody}" noli="${
-      dateArr[i].noli.IMonthCn
-    }${dateArr[i].noli.IDayCn}"
+     <div class="day_list" date="${dateArr[i].year}-${toTwo(dateArr[i].month * 1 + 1)}-${toTwo(
+      dateArr[i].tdody
+    )}" noli="${dateArr[i].noli.IMonthCn}${dateArr[i].noli.IDayCn}"
     nolicons="${dateArr[i].noli.gzYear}年${dateArr[i].noli.gzMonth}月${dateArr[i].noli.gzDay}日"
     
     >
@@ -69,33 +69,42 @@ function rederDate(dateArr) {
     var arr = $(this).attr('date').split('-')
     var year = arr[0]
     var month = arr[1]
-    var today = arr[2]
+    var today =$(this).find('.dayone').html()
     //  发送请求数渲染右边
     $('.tody').html(today)
     clickDate = $(this).attr('date').split('-')
-    // console.log(clickDate)
+     console.log(clickDate)
   })
 
-  $('.day_list').hover(function () {
-    if ($(this).find('.dayone').text() !== ' ') {
-      var y = $(this).attr('date')
-      var noli = $(this).attr('noli')
-      var nolicons = $(this).attr('nolicons')
-      var tips = `
+  $('.day_list').hover(
+    function () {
+      if ($(this).find('.dayone').text() !== ' ') {
+        var y = $(this).attr('date')
+        var noli = $(this).attr('noli')
+        var nolicons = $(this).attr('nolicons')
+        var tips = `
     <div class="tips">
     <p>${y}</p>
     <p>${noli}</p>
     <p>${nolicons}</p>
   </div>`
-      var that = $(this)
+        var that = $(this)
+        layui.use('layer', function () {
+          var layer = layui.layer
+          layer.closeAll() //疯狂模式，关闭所有层
+          layer.tips(tips, that, {
+            tips: [2, '#2c6ce1'],
+          })
+        })
+      }
+    },
+    function () {
       layui.use('layer', function () {
         var layer = layui.layer
-        layer.tips(tips, that, {
-          tips: [2, '#2c6ce1'],
-        })
+        layer.closeAll() //疯狂模式，关闭所有层
       })
     }
-  })
+  )
 }
 //重渲染日历
 function reszeDate(year, month, tody) {
@@ -147,8 +156,6 @@ $('.current').click(function () {
 console.log('-------------', curYear, curMonth, curDate)
 
 console.log(calendar.solar2lunar(curYear, 12, 15))
-
-layui.use('layer', function () {
-  var layer = layui.layer
-  layer.tips('默认就是向右的', '#id或者.class')
-})
+function toTwo(date) {
+  return date < 10 ? '0' + date : date
+}
