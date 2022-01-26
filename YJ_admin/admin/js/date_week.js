@@ -16,22 +16,25 @@ function is_leap(year) {
   return year % 100 == 0 ? (res = year % 400 == 0 ? 1 : 0) : (res = year % 4 == 0 ? 1 : 0)
 }
 function showDate(year, month, today) {
+  console.log(year, month, today, '---')
   var thisTime = new Date(year, month, 1) //获取每个月的第一天
   var firstday = thisTime.getDay() //当月第一天星期几
   var tr_str = Math.ceil((MonthArry[month] + firstday) / 7) //表格所需要行数
+  console.log(tr_str, 'tr_str')
   var dateArr = []
   for (i = 0; i < tr_str; i++) {
     for (k = 0; k < 7; k++) {
       var idx = i * 7 + k //表格单元的自然序号
+      console.log('idx', idx)
       var date_str = idx - firstday + 1 //计算日期
       date_str <= 0 || date_str > MonthArry[month] ? (date_str = ' ') : (date_str = idx - firstday + 1)
-
+      console.log(year, month, date_str)
       dateArr.push({
         year: year,
         month: month,
         tdody: date_str,
-        noli: calendar.solar2lunar(year, month, date_str),
-        shark: 0,
+        // noli: calendar.solar2lunar(year, month, date_str),
+        shark: 0
       })
     }
   }
@@ -69,11 +72,11 @@ function rederDate(dateArr) {
     var arr = $(this).attr('date').split('-')
     var year = arr[0]
     var month = arr[1]
-    var today =$(this).find('.dayone').html()
+    var today = $(this).find('.dayone').html()
     //  发送请求数渲染右边
     $('.tody').html(today)
     clickDate = $(this).attr('date').split('-')
-     console.log(clickDate)
+    console.log(clickDate, '点击日期')
   })
 
   $('.day_list').hover(
@@ -93,7 +96,7 @@ function rederDate(dateArr) {
           var layer = layui.layer
           layer.closeAll() //疯狂模式，关闭所有层
           layer.tips(tips, that, {
-            tips: [2, '#2c6ce1'],
+            tips: [2, '#2c6ce1']
           })
         })
       }
