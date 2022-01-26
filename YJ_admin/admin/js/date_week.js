@@ -25,7 +25,6 @@ function showDate(year, month, today) {
   for (i = 0; i < tr_str; i++) {
     for (k = 0; k < 7; k++) {
       var idx = i * 7 + k //表格单元的自然序号
-      console.log('idx', idx)
       var date_str = idx - firstday + 1 //计算日期
       date_str <= 0 || date_str > MonthArry[month] ? (date_str = ' ') : (date_str = idx - firstday + 1)
       console.log(year, month, date_str)
