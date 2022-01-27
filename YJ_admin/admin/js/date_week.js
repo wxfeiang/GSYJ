@@ -45,12 +45,7 @@ function showDate(year, month, today) {
         var x = Math.abs(date_str - 1)
         date_str = new Date(thisTime - x * 24 * 60 * 60 * 1000).getDate()
       } else if (date_str > MonthArry[month]) {
-        var x = date_str - MonthArry[month]
-        // console.log(date_str, 'date_str', MonthArry[month], date_str - MonthArry[month])
-        // lasttime.setDate(lasttime.getDate() + x)
-        // console.log(new Date(thisTime - date_str * 24 * 60 * 60 * 1000).getDate())
-
-        // lasttime.setDate(lasttime.getDate() + AddDayCount)
+        //TODO  尾部不全日期   2023 11 月有问题。。。
         nowYear = nextYear
         nowMonth = nextMonth
 
@@ -71,7 +66,7 @@ function showDate(year, month, today) {
       })
     }
   }
-  // console.log(dateArr)
+  console.log(dateArr)
   rederDate(dateArr)
 }
 showDate(curYear, curMonth, curDate)
@@ -84,7 +79,7 @@ function rederDate(dateArr) {
   for (i = 0; i < dateArr.length; i++) {
     var curMounthFlog = dateArr[i].month + 1 == surMonth ? '' : 'nowNonth'
     var shark = dateArr[i].shark == 1 ? `<div class="dayshark">.</div>` : ''
-    var tody = dateArr[i].tdody == curDate && dateArr[i].month == curMonth ? 'today' : ''
+    var tody = dateArr[i].tdody == curDate && dateArr[i].month == curMonth && dateArr[i].year == curYear ? 'today' : ''
     var nullDom = dateArr[i].tdody == ' ' ? 'nullDom' : '' //  判断空值
     var isTerm = 'term'
     var curday = null
