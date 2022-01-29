@@ -23,11 +23,9 @@ function showDate(year, month, today) {
   var firstday = thisTime.getDay() //当月第一天星期几
   var tr_str = Math.ceil((MonthArry[month] + firstday) / 7) //表格所需要行数
 
-  // var preDate = new Date(curDate.getTime() - 24*60*60*1000); //前一天
-  // var nextDate = new Date(curDate.getTime() + 24*60*60*1000); //后一天
-
-  var preYear = month == 0 ? year - 1 : year
-  var nextYear = month == 11 ? year + 1 : year
+  //TODO  尾部不全日期   传入的年份有问题 2023 11 月有问题。。。
+  var preYear = month == 0 ? year * 1 - 1 : year
+  var nextYear = month == 11 ? year * 1 + 1 : year
   var preMonth = month == 0 ? 11 : month - 1 //  后续会自动处理 month 根据下标
   var nextMonth = month == 11 ? 0 : month + 1
   var nowYear = null
@@ -45,10 +43,8 @@ function showDate(year, month, today) {
         var x = Math.abs(date_str - 1)
         date_str = new Date(thisTime - x * 24 * 60 * 60 * 1000).getDate()
       } else if (date_str > MonthArry[month]) {
-        //TODO  尾部不全日期   2023 11 月有问题。。。
         nowYear = nextYear
         nowMonth = nextMonth
-
         date_str -= MonthArry[month]
       } else {
         //  当月的日期值
@@ -66,7 +62,7 @@ function showDate(year, month, today) {
       })
     }
   }
-  console.log(dateArr)
+  // console.log(dateArr)
   rederDate(dateArr)
 }
 showDate(curYear, curMonth, curDate)
